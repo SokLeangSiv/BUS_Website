@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SweetRain } from "@/components/SweetRain";
+import { GeminiChatWidget } from "@/components/GeminiChatWidget";
 
 const fredoka = Fredoka({
   variable: "--font-heading",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <SweetRain />
+        <GeminiChatWidget />
         <Footer />
       </body>
     </html>
