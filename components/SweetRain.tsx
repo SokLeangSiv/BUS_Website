@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 interface RainParticle {
   id: number;
@@ -14,14 +14,14 @@ interface RainParticle {
 
 const EMOJIS = ["🍰", "💖", "✨", "🍒", "🌸", "🍓", "🧁", "💖", "🍰"];
 
-// Pre-generate 28 particles with fixed pseudo-random values to avoid hydration mismatch
-const PARTICLES: RainParticle[] = Array.from({ length: 28 }, (_, i) => ({
+// Pre-generate particles with softer ambient sizing
+const PARTICLES: RainParticle[] = Array.from({ length: 24 }, (_, i) => ({
   id: i,
   emoji: EMOJIS[i % EMOJIS.length],
-  left: Math.round(((i * 3.7 + (i % 5) * 17) % 92) + 4),
-  duration: Math.round(5 + (i % 4) * 1.5 + (i % 3) * 0.8),
-  delay: Math.round((i % 7) * 0.8 + (i % 3) * 0.4),
-  size: Math.round(18 + (i % 3) * 8),
+  left: Math.round(((i * 4.1 + (i % 5) * 16) % 92) + 4),
+  duration: Math.round(6 + (i % 4) * 1.5 + (i % 3) * 1.0),
+  delay: Math.round((i % 7) * 0.9 + (i % 3) * 0.5),
+  size: Math.round(14 + (i % 3) * 6),
 }));
 
 export const SweetRain: React.FC = () => {
@@ -52,9 +52,9 @@ export const SweetRain: React.FC = () => {
         </button>
       </div>
 
-      {/* Falling Rain Particles Overlay */}
+      {/* Falling Rain Particles Overlay (Soft Ambient Opacity) */}
       {enabled && (
-        <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden">
+        <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden opacity-50">
           {PARTICLES.map((p) => (
             <div
               key={p.id}
