@@ -3,6 +3,7 @@ import { Fredoka, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SweetRain } from "@/components/SweetRain";
 
 const fredoka = Fredoka({
   variable: "--font-heading",
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[#fff8fa] text-slate-800 selection:bg-pink-200 selection:text-pink-900">
         <Navbar />
         <main className="flex-grow">{children}</main>
+        <SweetRain />
         <Footer />
       </body>
     </html>

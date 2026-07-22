@@ -37,6 +37,28 @@
   50% { opacity: 1; transform: scale(1.2); }
 }
 
+/* Falling Sweet Rain Keyframes */
+@keyframes falling-rain {
+  0% {
+    transform: translateY(-50px) rotate(0deg) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-falling-rain {
+  animation: falling-rain linear infinite;
+}
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
