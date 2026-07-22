@@ -8,7 +8,7 @@ import { FlavorCard } from "@/components/FlavorCard";
 import { OrderDrawer } from "@/components/OrderDrawer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SprinklesBackground } from "@/components/SprinklesBackground";
-import { Sparkles, Heart, ArrowRight, ShoppingBag, Star, CheckCircle, Search, SlidersHorizontal } from "lucide-react";
+import { Sparkles, Heart, ArrowRight, ShoppingBag, Star, CheckCircle, Search } from "lucide-react";
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<"all" | "signature" | "classic" | "seasonal">("all");
@@ -191,7 +191,6 @@ export default function HomePage() {
 
           {/* Search & Filter Control Bar */}
           <div className="max-w-3xl mx-auto mb-10 space-y-4">
-            {/* Search Input */}
             <div className="relative">
               <Search className="w-5 h-5 text-slate-400 absolute left-4 top-3.5" />
               <input
@@ -211,7 +210,6 @@ export default function HomePage() {
               )}
             </div>
 
-            {/* Filter Tabs */}
             <div className="flex items-center justify-center gap-2 flex-wrap">
               {[
                 { id: "all", label: "All Slices 🍰" },
@@ -299,17 +297,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS & TESTIMONIALS */}
+      {/* REVIEWS & TESTIMONIALS (FEATURED JONATHAN MACARAEG) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Customer Stories"
-            title="What Our Customers & Partners Say"
-            subtitle="Real feedback from dessert lovers, hotel managers, and event hosts."
+            title="What Our Customers & Professors Say"
+            subtitle="Real feedback from dessert lovers, university lecturers, hotel managers, and event hosts."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4">
+            {/* FEATURED: JONATHAN MACARAEG */}
+            <div className="p-6 rounded-3xl glass-card border-2 border-pink-400 bg-gradient-to-b from-white via-pink-50/60 to-rose-50/40 shadow-xl shadow-pink-200/50 space-y-4 transform hover:-translate-y-2 transition-all duration-300 relative">
+              <div className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-pink-500 text-white text-[10px] font-extrabold uppercase shadow-xs">
+                🌟 Featured Review
+              </div>
+
               <div className="flex items-center gap-1 text-amber-400">
                 <Star className="w-4 h-4 fill-amber-400" />
                 <Star className="w-4 h-4 fill-amber-400" />
@@ -317,21 +320,31 @@ export default function HomePage() {
                 <Star className="w-4 h-4 fill-amber-400" />
                 <Star className="w-4 h-4 fill-amber-400" />
               </div>
-              <p className="text-xs text-slate-700 italic leading-relaxed">
-                "The Khmer Palm Sugar Cheesecake is out of this world! Perfect balance of smoky caramel sweetness and velvety cream cheese."
+
+              <p className="text-xs text-slate-800 italic leading-relaxed font-medium">
+                "Five Slices Cheesecake Co. delivers outstanding quality. The Khmer Palm Sugar Cheesecake is a masterclass in culinary balance — velvety cream cheese paired with smoky, authentic local palm sugar caramel!"
               </p>
-              <div className="flex items-center gap-3 pt-2 border-t border-pink-100">
-                <div className="w-9 h-9 rounded-full bg-pink-200 flex items-center justify-center font-bold text-pink-700 text-xs">
-                  SL
+
+              <div className="flex items-center gap-3 pt-3 border-t border-pink-200/80">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-pink-400 shadow-md shrink-0 bg-pink-100">
+                  <Image
+                    src="/images/Mr-Jonathan-scaled.jpg"
+                    alt="Jonathan MACARAEG"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">Sopheak Leakhena</h4>
-                  <span className="text-[10px] text-pink-500">Phnom Penh Customer</span>
+                  <h4 className="text-sm font-extrabold text-slate-900">Jonathan MACARAEG</h4>
+                  <span className="text-[11px] font-semibold text-pink-600 block">
+                    Paragon International University Lecturer
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4">
+            {/* Testimonial 2 */}
+            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4 hover:-translate-y-1 transition-transform">
               <div className="flex items-center gap-1 text-amber-400">
                 <Star className="w-4 h-4 fill-amber-400" />
                 <Star className="w-4 h-4 fill-amber-400" />
@@ -342,18 +355,19 @@ export default function HomePage() {
               <p className="text-xs text-slate-700 italic leading-relaxed">
                 "We sampled 4 flavors during our Sihanoukville pitch meeting. Excellent portion consistency, bilingual packaging, and top-tier taste."
               </p>
-              <div className="flex items-center gap-3 pt-2 border-t border-pink-100">
-                <div className="w-9 h-9 rounded-full bg-purple-200 flex items-center justify-center font-bold text-purple-700 text-xs">
+              <div className="flex items-center gap-3 pt-3 border-t border-pink-100">
+                <div className="w-11 h-11 rounded-full bg-purple-200 flex items-center justify-center font-bold text-purple-700 text-xs shadow-xs">
                   DC
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-slate-900">Dara Chenda</h4>
-                  <span className="text-[10px] text-purple-600">Coastal Hospitality Ventures</span>
+                  <span className="text-[10px] font-semibold text-purple-600 block">Coastal Hospitality Ventures</span>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4">
+            {/* Testimonial 3 */}
+            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4 hover:-translate-y-1 transition-transform">
               <div className="flex items-center gap-1 text-amber-400">
                 <Star className="w-4 h-4 fill-amber-400" />
                 <Star className="w-4 h-4 fill-amber-400" />
@@ -362,15 +376,15 @@ export default function HomePage() {
                 <Star className="w-4 h-4 fill-amber-400" />
               </div>
               <p className="text-xs text-slate-700 italic leading-relaxed">
-                "The pastel packaging is gorgeous! Perfect gift boxes for birthdays, office treats, or weekend celebrations."
+                "The pastel gift packaging is gorgeous! Perfect boxes for birthdays, office treats, or weekend celebrations."
               </p>
-              <div className="flex items-center gap-3 pt-2 border-t border-pink-100">
-                <div className="w-9 h-9 rounded-full bg-rose-200 flex items-center justify-center font-bold text-rose-700 text-xs">
-                  VN
+              <div className="flex items-center gap-3 pt-3 border-t border-pink-100">
+                <div className="w-11 h-11 rounded-full bg-rose-200 flex items-center justify-center font-bold text-rose-700 text-xs shadow-xs">
+                  SL
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">Vannary Neth</h4>
-                  <span className="text-[10px] text-rose-500">Siem Reap Expat Community</span>
+                  <h4 className="text-xs font-bold text-slate-900">Sopheak Leakhena</h4>
+                  <span className="text-[10px] font-semibold text-rose-500 block">Phnom Penh Customer</span>
                 </div>
               </div>
             </div>
