@@ -5,7 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sparkles, Heart, Menu, X, ShoppingBag, Cake } from "lucide-react";
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  sweetRainEnabled?: boolean;
+  onToggleSweetRain?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({
+  sweetRainEnabled = true,
+  onToggleSweetRain,
+}) => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -17,7 +25,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-pink-100/60 shadow-xs transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/85 border-b border-pink-100/80 shadow-xs transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
         {/* Brand Logo */}
@@ -65,8 +73,26 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* CTA Button */}
+        {/* Right CTA Actions Bar */}
         <div className="hidden md:flex items-center gap-3">
+          
+          {/* Sweet Rain Toggle Button in Navbar (Top Right) */}
+          {onToggleSweetRain && (
+            <button
+              onClick={onToggleSweetRain}
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-extrabold transition-all duration-300 border ${
+                sweetRainEnabled
+                  ? "bg-pink-100 text-pink-700 border-pink-300 hover:bg-pink-200 shadow-2xs"
+                  : "bg-slate-100 text-slate-500 border-slate-200 hover:bg-slate-200"
+              }`}
+              title="Toggle Sweet Rain Animation"
+            >
+              <span>🍰</span>
+              <span>Rain: {sweetRainEnabled ? "ON ✨" : "OFF"}</span>
+            </button>
+          )}
+
+          {/* Order Slices Button */}
           <Link
             href="/contact"
             className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white font-bold text-sm shadow-md shadow-pink-200 hover:shadow-lg hover:shadow-pink-300 hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden"
@@ -79,13 +105,23 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Toggle Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2.5 rounded-xl bg-pink-100/70 text-pink-600 hover:bg-pink-200 transition-colors"
-          aria-label="Toggle Navigation Menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          {onToggleSweetRain && (
+            <button
+              onClick={onToggleSweetRain}
+              className="p-2 rounded-xl bg-pink-100 text-pink-700 text-xs font-bold"
+            >
+              🍰 {sweetRainEnabled ? "ON" : "OFF"}
+            </button>
+          )}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2.5 rounded-xl bg-pink-100/70 text-pink-600 hover:bg-pink-200 transition-colors"
+            aria-label="Toggle Navigation Menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Menu */}

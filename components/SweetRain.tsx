@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { Heart } from "lucide-react";
+import React from "react";
 
 interface RainParticle {
   id: number;
@@ -12,9 +11,13 @@ interface RainParticle {
   size: number;
 }
 
+interface SweetRainProps {
+  enabled?: boolean;
+}
+
 const EMOJIS = ["🍰", "💖", "✨", "🍒", "🌸", "🍓", "🧁", "💖", "🍰"];
 
-// Pre-generate particles with balanced sizing
+// Pre-generate particles with optimal sizing and distribution
 const PARTICLES: RainParticle[] = Array.from({ length: 24 }, (_, i) => ({
   id: i,
   emoji: EMOJIS[i % EMOJIS.length],
@@ -24,54 +27,26 @@ const PARTICLES: RainParticle[] = Array.from({ length: 24 }, (_, i) => ({
   size: Math.round(16 + (i % 3) * 6),
 }));
 
-export const SweetRain: React.FC = () => {
-  const [enabled, setEnabled] = useState(true);
+export const SweetRain: React.FC<SweetRainProps> = ({ enabled = true }) => {
+  if (!enabled) return null;
 
   return (
-    <>
-      {/* Floating Toggle Button (Fixed Bottom-Right) */}
-      <div className="fixed bottom-6 right-6 z-50 print:hidden">
-        <button
-          onClick={() => setEnabled(!enabled)}
-          className={`group flex items-center gap-2 px-4 py-2.5 rounded-full font-extrabold text-xs shadow-xl transition-all duration-300 border-2 ${
-            enabled
-              ? "bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white border-white shadow-pink-300 hover:scale-105"
-              : "bg-white text-slate-700 border-pink-200 hover:border-pink-400 shadow-slate-200"
-          }`}
-          title="Toggle Falling Cheesecake & Heart Rain Animation"
+    <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden">
+      {PARTICLES.map((p) => (
+        <div
+          key={p.id}
+          className="absolute animate-falling-rain"
+          style={{
+            left: `${p.left}%`,
+            fontSize: `${p.size}px`,
+            animationDuration: `${p.duration}s`,
+            animationDelay: `${p.delay}s`,
+            top: `-40px`,
+          }}
         >
-          <span className="text-base animate-bounce" style={{ animationDuration: "2s" }}>
-            🍰
-          </span>
-          <span>Sweet Rain: {enabled ? "ON ✨" : "OFF"}</span>
-          <Heart
-            className={`w-3.5 h-3.5 ${
-              enabled ? "fill-white text-white animate-pulse" : "text-pink-400"
-            }`}
-          />
-        </button>
-      </div>
-
-      {/* Falling Rain Particles Overlay */}
-      {enabled && (
-        <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden">
-          {PARTICLES.map((p) => (
-            <div
-              key={p.id}
-              className="absolute animate-falling-rain"
-              style={{
-                left: `${p.left}%`,
-                fontSize: `${p.size}px`,
-                animationDuration: `${p.duration}s`,
-                animationDelay: `${p.delay}s`,
-                top: `-40px`,
-              }}
-            >
-              {p.emoji}
-            </div>
-          ))}
+          {p.emoji}
         </div>
-      )}
-    </>
+      ))}
+    </div>
   );
 };

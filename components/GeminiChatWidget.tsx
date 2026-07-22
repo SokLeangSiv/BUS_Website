@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Sparkles, MessageSquare, X, Send, Bot, User, Cake, Heart, Minimize2 } from "lucide-react";
+import { Sparkles, X, Send, Bot, User, Cake, Heart, Minimize2 } from "lucide-react";
 
 interface Message {
   id: string;
@@ -14,7 +14,7 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: "welcome-1",
     sender: "ai",
-    text: "Hello! 🍰✨ I am your **Five Slices Gemini AI Assistant**! How can I help you today? Ask me about our signature Khmer Palm Sugar Cheesecake, our team led by Leangsiv Sok 👑, or our 5 field trip reports!",
+    text: "Hello! 🍰✨ I am **Five Slice AI**, your official assistant for Five Slices Cheesecake Co.! \n\nHow can I help you today? Ask me about our signature **Khmer Palm Sugar Cheesecake**, our team led by **Leangsiv Sok 👑**, or our **Siem Reap expansion scores**!",
     timestamp: "Just now",
   },
 ];
@@ -66,7 +66,7 @@ export const GeminiChatWidget: React.FC = () => {
       });
 
       const data = await res.json();
-      const aiReply = data.reply || "I'm happy to help! What else would you like to know about Five Slices Cheesecake Co.? 🍰✨";
+      const aiReply = data.reply || "I'm delighted to help! How else can I assist you with Five Slices Cheesecake Co.? 🍰✨";
 
       const aiMsg: Message = {
         id: (Date.now() + 1).toString(),
@@ -81,7 +81,7 @@ export const GeminiChatWidget: React.FC = () => {
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         sender: "ai",
-        text: "I'm right here to help! 🍰 Our signature **Khmer Palm Sugar Cheesecake** is $4.50/slice and our team is led by **Leangsiv Sok 👑**! What would you like to explore next?",
+        text: "I'm right here to assist! 🍰 Our signature **Khmer Palm Sugar Cheesecake** is $4.50/slice and our team is led by **Leangsiv Sok 👑**! What would you like to explore next?",
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
       setMessages((prev) => [...prev, errorMsg]);
@@ -90,10 +90,43 @@ export const GeminiChatWidget: React.FC = () => {
     }
   };
 
+  // Helper function to render text with bold tags and lists cleanly
+  const renderFormattedText = (text: string) => {
+    const lines = text.split("\n");
+    return lines.map((line, lineIdx) => {
+      // Process bold formatting **text**
+      const parts = line.split(/(\*\*.*?\*\*)/g);
+      const formattedLine = parts.map((part, partIdx) => {
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return (
+            <strong key={partIdx} className="font-extrabold text-pink-950">
+              {part.slice(2, -2)}
+            </strong>
+          );
+        }
+        return part;
+      });
+
+      if (line.trim().startsWith("- ") || line.trim().startsWith("• ")) {
+        return (
+          <li key={lineIdx} className="ml-3 my-0.5 list-disc font-medium text-slate-800">
+            {formattedLine}
+          </li>
+        );
+      }
+
+      return (
+        <span key={lineIdx} className="block my-0.5 leading-relaxed">
+          {formattedLine}
+        </span>
+      );
+    });
+  };
+
   return (
     <>
-      {/* Floating Trigger Button (Bottom-Left) */}
-      <div className="fixed bottom-6 left-6 z-50 print:hidden">
+      {/* Floating AI Chat Trigger Button (NOW AT BOTTOM-RIGHT) */}
+      <div className="fixed bottom-6 right-6 z-50 print:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="group relative flex items-center gap-2.5 px-5 py-3 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white font-extrabold text-xs shadow-xl shadow-pink-300 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white"
@@ -102,14 +135,14 @@ export const GeminiChatWidget: React.FC = () => {
             <Bot className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-yellow-300 rounded-full animate-ping" />
           </div>
-          <span>Ask Gemini AI 🤖💬</span>
+          <span>Five Slice AI 🤖💬</span>
           <Sparkles className="w-3.5 h-3.5 text-yellow-200 animate-sparkle" />
         </button>
       </div>
 
       {/* Slide-Up Chat Modal Window */}
       {isOpen && (
-        <div className="fixed bottom-22 left-6 z-50 w-full max-w-sm sm:max-w-md h-[520px] bg-white/95 backdrop-blur-xl rounded-3xl border-2 border-pink-300 shadow-2xl flex flex-col justify-between overflow-hidden animate-in slide-in-from-bottom duration-300 print:hidden">
+        <div className="fixed bottom-22 right-6 z-50 w-full max-w-sm sm:max-w-md h-[530px] bg-white/95 backdrop-blur-xl rounded-3xl border-2 border-pink-300 shadow-2xl flex flex-col justify-between overflow-hidden animate-in slide-in-from-bottom duration-300 print:hidden">
           
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white flex items-center justify-between shadow-xs">
@@ -119,12 +152,12 @@ export const GeminiChatWidget: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-heading font-extrabold text-sm flex items-center gap-1.5">
-                  <span>Gemini AI Assistant</span>
+                  <span>Five Slice AI</span>
                   <span className="px-2 py-0.5 rounded-full bg-emerald-400 text-slate-900 text-[9px] font-extrabold uppercase">
                     Online
                   </span>
                 </h3>
-                <p className="text-[10px] text-pink-100 font-semibold">Five Slices Knowledge Expert 🍰</p>
+                <p className="text-[10px] text-pink-100 font-semibold">Five Slices Official Assistant 🍰✨</p>
               </div>
             </div>
 
@@ -179,16 +212,16 @@ export const GeminiChatWidget: React.FC = () => {
                 </div>
 
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl space-y-1 leading-relaxed ${
+                  className={`max-w-[82%] p-3.5 rounded-2xl space-y-1 leading-relaxed ${
                     msg.sender === "user"
                       ? "bg-pink-500 text-white rounded-tr-none shadow-xs font-medium"
-                      : "bg-pink-50/90 text-slate-800 border border-pink-200/80 rounded-tl-none font-normal"
+                      : "bg-pink-50/90 text-slate-800 border border-pink-200/80 rounded-tl-none shadow-xs"
                   }`}
                 >
-                  <p className="whitespace-pre-line">{msg.text}</p>
+                  <div>{renderFormattedText(msg.text)}</div>
                   <span
                     className={`block text-[9px] ${
-                      msg.sender === "user" ? "text-pink-100 text-right" : "text-slate-400"
+                      msg.sender === "user" ? "text-pink-100 text-right" : "text-slate-400 mt-1"
                     }`}
                   >
                     {msg.timestamp}
@@ -203,11 +236,11 @@ export const GeminiChatWidget: React.FC = () => {
                 <div className="w-7 h-7 rounded-xl bg-pink-100 text-pink-500 flex items-center justify-center shrink-0">
                   <Bot className="w-4 h-4 animate-spin" />
                 </div>
-                <div className="bg-pink-50 px-3 py-2 rounded-2xl border border-pink-100 flex items-center gap-1">
+                <div className="bg-pink-50 px-3 py-2 rounded-2xl border border-pink-100 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: "0ms" }} />
                   <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: "150ms" }} />
                   <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-bounce" style={{ animationDelay: "300ms" }} />
-                  <span className="text-[11px] font-semibold text-pink-600 ml-1">Gemini AI is thinking...</span>
+                  <span className="text-[11px] font-semibold text-pink-600 ml-1">Five Slice AI is typing...</span>
                 </div>
               </div>
             )}
@@ -227,8 +260,8 @@ export const GeminiChatWidget: React.FC = () => {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask Gemini AI anything about Five Slices..."
-              className="flex-grow px-4 py-2.5 text-xs rounded-2xl bg-pink-50/60 border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-slate-800"
+              placeholder="Ask Five Slice AI anything..."
+              className="flex-grow px-4 py-2.5 text-xs rounded-2xl bg-pink-50/60 border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-slate-800 font-medium"
             />
             <button
               type="submit"
