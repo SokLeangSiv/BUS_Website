@@ -297,97 +297,125 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS & TESTIMONIALS (FEATURED JONATHAN MACARAEG) */}
+      {/* REVIEWS & TESTIMONIALS (JONATHAN MACARAEG, RONALDO, MESSI) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Customer Stories"
-            title="What Our Customers & Professors Say"
-            subtitle="Real feedback from dessert lovers, university lecturers, hotel managers, and event hosts."
+            title="What Our VIP Customers & Icons Say"
+            subtitle="Real feedback from dessert connoisseurs, world icons, and cheesecake enthusiasts."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* FEATURED: JONATHAN MACARAEG */}
-            <div className="p-6 rounded-3xl glass-card border-2 border-pink-400 bg-gradient-to-b from-white via-pink-50/60 to-rose-50/40 shadow-xl shadow-pink-200/50 space-y-4 transform hover:-translate-y-2 transition-all duration-300 relative">
-              <div className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-pink-500 text-white text-[10px] font-extrabold uppercase shadow-xs">
-                🌟 Featured Review
+            
+            {/* TESTIMONIAL 1: JONATHAN MACARAEG */}
+            <div className="p-6 sm:p-7 rounded-3xl glass-card border-2 border-pink-400 bg-gradient-to-b from-white via-pink-50/60 to-rose-50/40 shadow-xl shadow-pink-200/50 space-y-5 transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1 text-amber-400">
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full bg-pink-500 text-white text-[10px] font-extrabold uppercase shadow-xs">
+                    🌟 Featured Review
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed font-medium">
+                  "Five Slices Cheesecake Co. delivers outstanding quality. The Khmer Palm Sugar Cheesecake is a masterclass in culinary balance — velvety cream cheese paired with smoky, authentic local palm sugar caramel!"
+                </p>
               </div>
 
-              <div className="flex items-center gap-1 text-amber-400">
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-              </div>
-
-              <p className="text-xs text-slate-800 italic leading-relaxed font-medium">
-                "Five Slices Cheesecake Co. delivers outstanding quality. The Khmer Palm Sugar Cheesecake is a masterclass in culinary balance — velvety cream cheese paired with smoky, authentic local palm sugar caramel!"
-              </p>
-
-              <div className="flex items-center gap-3 pt-3 border-t border-pink-200/80">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-pink-400 shadow-md shrink-0 bg-pink-100">
+              {/* Large Prominent Portrait Header */}
+              <div className="flex items-center gap-4 pt-4 border-t border-pink-200">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-pink-400 shadow-md shrink-0 bg-pink-100">
                   <Image
                     src="/images/Mr-Jonathan-scaled.jpg"
                     alt="Jonathan MACARAEG"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-extrabold text-slate-900">Jonathan MACARAEG</h4>
-                  <span className="text-[11px] font-semibold text-pink-600 block">
-                    Paragon International University Lecturer
+                  <h4 className="text-base font-extrabold text-slate-900">Jonathan MACARAEG</h4>
+                  <span className="text-xs font-bold text-pink-600 block mt-0.5">
+                    Paragon International University
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Testimonial 2 */}
-            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4 hover:-translate-y-1 transition-transform">
-              <div className="flex items-center gap-1 text-amber-400">
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
+            {/* TESTIMONIAL 2: CRISTIANO RONALDO */}
+            <div className="p-6 sm:p-7 rounded-3xl glass-card border border-pink-200 space-y-5 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center gap-1 text-amber-400">
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                </div>
+                <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed font-medium">
+                  "SIUUU! Five Slices Cheesecake Co. makes the best post-match reward! Incredible texture, premium quality ingredients, and unbelievable flavor!"
+                </p>
               </div>
-              <p className="text-xs text-slate-700 italic leading-relaxed">
-                "We sampled 4 flavors during our Sihanoukville pitch meeting. Excellent portion consistency, bilingual packaging, and top-tier taste."
-              </p>
-              <div className="flex items-center gap-3 pt-3 border-t border-pink-100">
-                <div className="w-11 h-11 rounded-full bg-purple-200 flex items-center justify-center font-bold text-purple-700 text-xs shadow-xs">
-                  DC
+
+              {/* Large Prominent Portrait Header */}
+              <div className="flex items-center gap-4 pt-4 border-t border-pink-100">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-purple-300 shadow-md shrink-0 bg-purple-100">
+                  <Image
+                    src="/images/ronaldo.png"
+                    alt="Cristiano Ronaldo"
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">Dara Chenda</h4>
-                  <span className="text-[10px] font-semibold text-purple-600 block">Coastal Hospitality Ventures</span>
+                  <h4 className="text-base font-extrabold text-slate-900">Cristiano Ronaldo</h4>
+                  <span className="text-xs font-bold text-purple-600 block mt-0.5">
+                    Global Sports Icon & Cheesecake Fan
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Testimonial 3 */}
-            <div className="p-6 rounded-3xl glass-card border border-pink-200 space-y-4 hover:-translate-y-1 transition-transform">
-              <div className="flex items-center gap-1 text-amber-400">
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
-                <Star className="w-4 h-4 fill-amber-400" />
+            {/* TESTIMONIAL 3: LIONEL MESSI */}
+            <div className="p-6 sm:p-7 rounded-3xl glass-card border border-pink-200 space-y-5 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center gap-1 text-amber-400">
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                  <Star className="w-4 h-4 fill-amber-400" />
+                </div>
+                <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed font-medium">
+                  "Order Five Slices! The Khmer Palm Sugar Cheesecake is absolute perfection. My family and I love every single slice!"
+                </p>
               </div>
-              <p className="text-xs text-slate-700 italic leading-relaxed">
-                "The pastel gift packaging is gorgeous! Perfect boxes for birthdays, office treats, or weekend celebrations."
-              </p>
-              <div className="flex items-center gap-3 pt-3 border-t border-pink-100">
-                <div className="w-11 h-11 rounded-full bg-rose-200 flex items-center justify-center font-bold text-rose-700 text-xs shadow-xs">
-                  SL
+
+              {/* Large Prominent Portrait Header */}
+              <div className="flex items-center gap-4 pt-4 border-t border-pink-100">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-sky-300 shadow-md shrink-0 bg-sky-100">
+                  <Image
+                    src="/images/messi.png"
+                    alt="Lionel Messi"
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">Sopheak Leakhena</h4>
-                  <span className="text-[10px] font-semibold text-rose-500 block">Phnom Penh Customer</span>
+                  <h4 className="text-base font-extrabold text-slate-900">Lionel Messi</h4>
+                  <span className="text-xs font-bold text-sky-600 block mt-0.5">
+                    World Champion & Dessert Connoisseur
+                  </span>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
