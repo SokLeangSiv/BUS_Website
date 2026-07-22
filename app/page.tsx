@@ -131,7 +131,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BRAND VALUES */}
+      {/* BRAND VALUES WITH LARGE FEATURED PHOTOS */}
       <section className="py-16 bg-white/80 backdrop-blur-md border-y border-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -141,41 +141,76 @@ export default function HomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl glass-card border border-pink-200/80 space-y-4 hover:-translate-y-1 transition-transform">
-              <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl font-bold">
-                🌴
+            
+            {/* Card 1: Direct Farm Palm Sugar */}
+            <div className="group p-6 rounded-3xl glass-card border border-pink-200/80 space-y-5 hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+              <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md border-2 border-amber-200">
+                <Image
+                  src="/images/value_palm_sugar.png"
+                  alt="Direct Farm Kampong Speu Palm Sugar Cheesecake"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-white text-[11px] font-extrabold uppercase shadow-xs">
+                  🌴 Organic Harvest
+                </div>
               </div>
-              <h3 className="font-heading font-extrabold text-xl text-slate-900">
-                Direct Farm Palm Sugar
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                We source organic palm sugar directly from smallholder farming families in Kampong Speu, creating a rich butterscotch caramel flavor.
-              </p>
+              <div className="space-y-2">
+                <h3 className="font-heading font-extrabold text-xl text-slate-900 group-hover:text-pink-600 transition-colors">
+                  Direct Farm Palm Sugar
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  We source organic palm sugar directly from smallholder farming families in Kampong Speu, creating a rich, authentic butterscotch caramel flavor.
+                </p>
+              </div>
             </div>
 
-            <div className="p-8 rounded-3xl glass-card border border-pink-200/80 space-y-4 hover:-translate-y-1 transition-transform">
-              <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl font-bold">
-                ❄️
+            {/* Card 2: Cold-Chain Delivery */}
+            <div className="group p-6 rounded-3xl glass-card border border-pink-200/80 space-y-5 hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+              <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md border-2 border-rose-200">
+                <Image
+                  src="/images/value_cold_chain.png"
+                  alt="Chilled Cold-Chain Delivery Box"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-rose-500/90 backdrop-blur-md text-white text-[11px] font-extrabold uppercase shadow-xs">
+                  ❄️ 2°C – 4°C Freshness
+                </div>
               </div>
-              <h3 className="font-heading font-extrabold text-xl text-slate-900">
-                Cold-Chain Delivery
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Our cakes travel in temperature-regulated cold boxes (2°C – 4°C) to keep every slice velvety and rich from our oven to your door.
-              </p>
+              <div className="space-y-2">
+                <h3 className="font-heading font-extrabold text-xl text-slate-900 group-hover:text-pink-600 transition-colors">
+                  Cold-Chain Delivery
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Our cakes travel in temperature-regulated cold boxes (2°C – 4°C) to keep every slice velvety, cool, and rich from our oven to your door.
+                </p>
+              </div>
             </div>
 
-            <div className="p-8 rounded-3xl glass-card border border-pink-200/80 space-y-4 hover:-translate-y-1 transition-transform">
-              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold">
-                ✨
+            {/* Card 3: Pastel Gift Packaging */}
+            <div className="group p-6 rounded-3xl glass-card border border-pink-200/80 space-y-5 hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+              <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md border-2 border-pink-200">
+                <Image
+                  src="/images/value_gift_packaging.png"
+                  alt="Custom Pastel Pink Gift Boxes"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-pink-500/90 backdrop-blur-md text-white text-[11px] font-extrabold uppercase shadow-xs">
+                  ✨ Luxury Gift Packaging
+                </div>
               </div>
-              <h3 className="font-heading font-extrabold text-xl text-slate-900">
-                Pastel Gift Packaging
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Every order comes packaged in custom pastel pink boxes with gold accents, perfect for birthdays, office treats, or celebrations.
-              </p>
+              <div className="space-y-2">
+                <h3 className="font-heading font-extrabold text-xl text-slate-900 group-hover:text-pink-600 transition-colors">
+                  Pastel Gift Packaging
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Every order comes packaged in custom pastel pink boxes with gold accents, perfect for birthdays, office treats, or weekend celebrations.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
