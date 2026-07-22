@@ -3,23 +3,19 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Flavor } from "@/lib/flavors-data";
-import { Star, Heart, ShoppingBag, Check } from "lucide-react";
+import { Star, Heart, ShoppingBag, ArrowUpRight } from "lucide-react";
 
 interface FlavorCardProps {
   flavor: Flavor;
+  onSelectFlavor?: (flavor: Flavor) => void;
 }
 
-export const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
-  const [ordered, setOrdered] = useState(false);
-
-  const handleOrderClick = () => {
-    setOrdered(true);
-    setTimeout(() => setOrdered(false), 3000);
-  };
-
+export const FlavorCard: React.FC<FlavorCardProps> = ({ flavor, onSelectFlavor }) => {
   return (
-    <div className="group relative rounded-3xl glass-card border border-pink-200/80 p-6 shadow-md shadow-pink-100/50 hover:shadow-xl hover:shadow-pink-200/60 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-      
+    <div
+      onClick={() => onSelectFlavor && onSelectFlavor(flavor)}
+      className="group relative rounded-3xl glass-card border border-pink-200/80 p-6 shadow-md shadow-pink-100/50 hover:shadow-xl hover:shadow-pink-200/60 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+    >
       {/* Top Background Image Header */}
       <div className="h-48 -mx-6 -mt-6 mb-5 relative overflow-hidden bg-slate-100">
         <Image
@@ -38,7 +34,12 @@ export const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
               {flavor.badge}
             </span>
           )}
-          <button className="p-2 rounded-full bg-white/80 text-pink-500 hover:text-rose-600 hover:bg-white hover:scale-110 transition-all shadow-xs ml-auto">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className="p-2 rounded-full bg-white/80 text-pink-500 hover:text-rose-600 hover:bg-white hover:scale-110 transition-all shadow-xs ml-auto"
+          >
             <Heart className="w-4 h-4 fill-pink-200 hover:fill-pink-500" />
           </button>
         </div>
@@ -65,8 +66,9 @@ export const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
         </div>
 
         <div>
-          <h3 className="font-heading font-extrabold text-xl text-slate-900 group-hover:text-pink-600 transition-colors">
-            {flavor.name}
+          <h3 className="font-heading font-extrabold text-xl text-slate-900 group-hover:text-pink-600 transition-colors flex items-center justify-between">
+            <span>{flavor.name}</span>
+            <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover:text-pink-500 transition-colors" />
           </h3>
           <p className="text-xs font-semibold text-pink-500 mt-0.5">
             {flavor.tagline}
@@ -94,22 +96,13 @@ export const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
           <span className="text-lg font-extrabold font-heading text-pink-600">{flavor.priceSlice}</span>
         </div>
         <button
-          onClick={handleOrderClick}
-          className={`px-4 py-2.5 rounded-2xl font-bold text-xs flex items-center gap-1.5 transition-all shadow-md ${
-            ordered
-              ? "bg-emerald-500 text-white shadow-emerald-200"
-              : "bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-pink-200 hover:scale-105 active:scale-95"
-          }`}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onSelectFlavor) onSelectFlavor(flavor);
+          }}
+          className="px-4 py-2.5 rounded-2xl font-bold text-xs flex items-center gap-1.5 transition-all shadow-md bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-pink-200 hover:scale-105 active:scale-95"
         >
-          {ordered ? (
-            <>
-              <Check className="w-4 h-4" /> Added to Order!
-            </>
-          ) : (
-            <>
-              <ShoppingBag className="w-4 h-4" /> Order Slices
-            </>
-          )}
+          <ShoppingBag className="w-4 h-4" /> Order Slices
         </button>
       </div>
 
