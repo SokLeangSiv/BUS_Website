@@ -9,7 +9,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone: "",   
     flavor: "khmer-palm-sugar",
     orderType: "slice-box",
     date: "",
