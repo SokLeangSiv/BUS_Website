@@ -14,14 +14,14 @@ interface RainParticle {
 
 const EMOJIS = ["🍰", "💖", "✨", "🍒", "🌸", "🍓", "🧁", "💖", "🍰"];
 
-// Pre-generate particles with softer ambient sizing
+// Pre-generate particles with balanced sizing
 const PARTICLES: RainParticle[] = Array.from({ length: 24 }, (_, i) => ({
   id: i,
   emoji: EMOJIS[i % EMOJIS.length],
   left: Math.round(((i * 4.1 + (i % 5) * 16) % 92) + 4),
-  duration: Math.round(6 + (i % 4) * 1.5 + (i % 3) * 1.0),
-  delay: Math.round((i % 7) * 0.9 + (i % 3) * 0.5),
-  size: Math.round(14 + (i % 3) * 6),
+  duration: Math.round(5.5 + (i % 4) * 1.4 + (i % 3) * 0.8),
+  delay: Math.round((i % 7) * 0.8 + (i % 3) * 0.4),
+  size: Math.round(16 + (i % 3) * 6),
 }));
 
 export const SweetRain: React.FC = () => {
@@ -52,9 +52,9 @@ export const SweetRain: React.FC = () => {
         </button>
       </div>
 
-      {/* Falling Rain Particles Overlay (Soft Ambient Opacity) */}
+      {/* Falling Rain Particles Overlay */}
       {enabled && (
-        <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden opacity-50">
+        <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden select-none print:hidden">
           {PARTICLES.map((p) => (
             <div
               key={p.id}

@@ -37,17 +37,17 @@
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* Falling Sweet Rain Keyframes - Soft Ambient Opacity */
+/* Falling Sweet Rain Keyframes - Balanced Opacity (0.60) */
 @keyframes falling-rain {
   0% {
-    transform: translateY(-40px) rotate(0deg) scale(0.7);
+    transform: translateY(-40px) rotate(0deg) scale(0.75);
     opacity: 0;
   }
   20% {
-    opacity: 0.35;
+    opacity: 0.60;
   }
   80% {
-    opacity: 0.35;
+    opacity: 0.60;
   }
   100% {
     transform: translateY(105vh) rotate(360deg) scale(1);
