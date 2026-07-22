@@ -16,10 +16,13 @@ export interface Flavor {
 }
 
 export interface TeamMember {
+  id: string;
   name: string;
   role: string;
+  isLeader?: boolean;
   quote: string;
   avatarGradient: string;
+  imagePath?: string;
   bio: string;
 }
 
@@ -124,39 +127,54 @@ export const FEATURED_FLAVORS: Flavor[] = [
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Yinchhay Im",
-    role: "Team Leader & Strategy Coordinator",
-    quote: "Building a brand is about blending vision with disciplined execution and heartfelt quality.",
-    avatarGradient: "from-pink-400 to-rose-400",
-    bio: "Spearheads strategic growth, investor relations, and master brand direction across Cambodia."
+    id: "leangsiv-sok",
+    name: "Leangsiv Sok",
+    role: "Team Leader & Documentation Lead",
+    isLeader: true,
+    quote: "Authentic storytelling and disciplined execution connect our heritage recipes to the hearts of our customers.",
+    avatarGradient: "from-pink-500 via-rose-500 to-amber-400",
+    imagePath: "/images/team_leangsiv.png",
+    bio: "Spearheads overall team direction, master brand communications, company documentation, and digital marketing."
   },
   {
+    id: "yinchhay-im",
+    name: "Yinchhay Im",
+    role: "Strategy & Operations Coordinator",
+    isLeader: false,
+    quote: "Building a brand is about blending vision with disciplined execution and heartfelt quality.",
+    avatarGradient: "from-pink-400 to-rose-400",
+    imagePath: "/images/team_yinchhay.png",
+    bio: "Coordinates strategic growth, investor relations, and operational alignment across Cambodia."
+  },
+  {
+    id: "phearamoneath-phan",
     name: "Phearamoneath Phan",
     role: "Market Research Lead",
+    isLeader: false,
     quote: "Understanding customer desires in every city unlocks true product innovation.",
     avatarGradient: "from-purple-400 to-pink-400",
+    imagePath: "/images/team_phearamoneath.png",
     bio: "Leads foot traffic analytics, location selection scores, and customer sentiment studies."
   },
   {
+    id: "chanreach-try",
     name: "Chanreach Try",
     role: "Finance & Expense Coordinator",
+    isLeader: false,
     quote: "Disciplined capital allocation ensures every slice delivers premium value and sustainable profit.",
     avatarGradient: "from-amber-400 to-rose-400",
+    imagePath: "/images/team_chanreach.png",
     bio: "Manages financial modeling, trip expense reporting ($14,345 total), and expansion budgets."
   },
   {
+    id: "mengsreang-san",
     name: "Mengsreang San",
     role: "Operations & Logistics Coordinator",
+    isLeader: false,
     quote: "Cold-chain precision and fresh ingredient supply are the heartbeat of our kitchens.",
     avatarGradient: "from-rose-400 to-amber-400",
+    imagePath: "/images/team_mengsreang.png",
     bio: "Oversees cold-chain logistics, kiosk pilot deployment, and kitchen workflow systems."
-  },
-  {
-    name: "Leangsiv Sok",
-    role: "Documentation & Communications Lead",
-    quote: "Authentic storytelling connects our heritage recipes to the hearts of our customers.",
-    avatarGradient: "from-fuchsia-400 to-pink-400",
-    bio: "Directs company publications, master chef interviews, digital marketing, and CSR initiatives."
   }
 ];
 
