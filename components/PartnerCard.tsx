@@ -82,17 +82,6 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
           {partner.description}
         </p>
-
-        {/* Key Achievement Badge Box */}
-        {partner.achievement && (
-          <div className="p-3.5 rounded-2xl bg-gradient-to-r from-amber-50 to-pink-50 border border-amber-200/80 flex items-start gap-2.5">
-            <Award className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-            <div className="text-[11px] font-bold text-amber-950 leading-snug">
-              <span className="text-amber-800 font-extrabold block mb-0.5">🏆 Key Track Record & Impact:</span>
-              {partner.achievement}
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Bottom verified partner status bar */}

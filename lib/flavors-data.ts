@@ -198,7 +198,7 @@ export interface Partner {
   description: string;
   logoPath: string;
   badgeText: string;
-  achievement: string;
+  achievement?: string;
 }
 
 export const PARTNERS: Partner[] = [
