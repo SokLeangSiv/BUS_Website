@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-pink-100 via-rose-100 to-amber-100 border border-pink-300 text-pink-800 text-xs font-extrabold shadow-sm">
             <Sparkles className="w-4 h-4 text-amber-500 fill-amber-400 animate-pulse" />
-            <span>Established 2024 • Cambodia's Handcrafted Heritage, Baked with Modern Passion 👑</span>
+            <span>Established 2024 • Live. Love. Cheesecake. 👑</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">

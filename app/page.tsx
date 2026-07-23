@@ -41,12 +41,10 @@ export default function HomePage() {
                 <span>Handcrafted Daily in Phnom Penh ✨</span>
               </div>
 
-              <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.15]">
-                Fresh Artisan <br />
+              <h1 className="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl text-slate-900 tracking-tight leading-[1.15]">
                 <span className="bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 bg-clip-text text-transparent">
-                  Cambodian Cheesecake
+                  Live. Love. Cheesecake.
                 </span>
-                <br /> Baked with Love.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
