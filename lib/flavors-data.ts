@@ -133,7 +133,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     isLeader: true,
     quote: "Authentic storytelling and disciplined execution connect our heritage recipes to the hearts of our customers.",
     avatarGradient: "from-pink-500 via-rose-500 to-amber-400",
-    imagePath: "/images/team_leangsiv.png",
+    imagePath: "/images/Leangsiv.PNG",
     bio: "Spearheads overall team direction, master brand communications, company documentation, and digital marketing."
   },
   {
@@ -153,7 +153,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     isLeader: false,
     quote: "Understanding customer desires in every city unlocks true product innovation.",
     avatarGradient: "from-purple-400 to-pink-400",
-    imagePath: "/images/team_phearamoneath.png",
+    imagePath: "/images/moneath.png",
     bio: "Leads foot traffic analytics, location selection scores, and customer sentiment studies."
   },
   {
@@ -163,7 +163,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     isLeader: false,
     quote: "Disciplined capital allocation ensures every slice delivers premium value and sustainable profit.",
     avatarGradient: "from-amber-400 to-rose-400",
-    imagePath: "/images/team_chanreach.png",
+    imagePath: "/images/chanreach.png",
     bio: "Manages financial modeling, trip expense reporting ($14,345 total), and expansion budgets."
   },
   {
