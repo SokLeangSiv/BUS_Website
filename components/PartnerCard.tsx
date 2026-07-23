@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Partner } from "@/lib/flavors-data";
-import { Building2, CheckCircle2, Award } from "lucide-react";
+import { Building2, CheckCircle2 } from "lucide-react";
 
 interface PartnerCardProps {
   partner: Partner;
@@ -20,7 +20,6 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
           : "border-pink-200/90 bg-gradient-to-b from-white via-pink-50/30 to-rose-50/20 hover:shadow-pink-200/70"
       }`}
     >
-      
       <div className="space-y-5">
         {/* Top Header Badges */}
         <div className="flex items-center justify-between gap-2">
@@ -40,7 +39,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
           </span>
         </div>
 
-        {/* Real Business Logo Container (BIGGER h-36 sm:h-40) */}
+        {/* Real Business Logo Container */}
         <div className="h-36 sm:h-40 w-full rounded-2xl bg-white border-2 border-slate-100 p-4 flex items-center justify-center relative overflow-hidden group-hover:border-pink-300 shadow-inner group-hover:shadow-md transition-all">
           {!logoError ? (
             <div className="relative w-full h-full">
@@ -64,18 +63,12 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
           )}
         </div>
 
-        {/* Business Title & Contact Lead Info */}
+        {/* Business Title */}
         <div className="space-y-1">
           <h4 className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 group-hover:text-pink-600 transition-colors flex items-center justify-between gap-2">
             <span>{partner.name}</span>
             <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
           </h4>
-          {partner.leadName && (
-            <p className="text-xs font-extrabold text-pink-600 flex items-center gap-1">
-              <span>👤 Key Contact:</span>
-              <span className="text-slate-800">{partner.leadName}</span>
-            </p>
-          )}
         </div>
 
         {/* Description */}
@@ -83,18 +76,6 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
           {partner.description}
         </p>
       </div>
-
-      {/* Bottom verified partner status bar */}
-      <div className="pt-4 mt-5 border-t border-slate-200/80 flex items-center justify-between text-[11px] font-bold text-slate-600">
-        <span className="flex items-center gap-1.5 text-pink-700">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          {partner.isInternational ? "International Corporate Alliance" : "National Cambodian Partner"}
-        </span>
-        <span className="text-pink-600 font-extrabold group-hover:translate-x-1 transition-transform flex items-center gap-1">
-          {partner.flag} <span>View Alliance →</span>
-        </span>
-      </div>
-
     </div>
   );
 };
