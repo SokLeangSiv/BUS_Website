@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FEATURED_FLAVORS, INSTAGRAM_PHOTOS, Flavor } from "@/lib/flavors-data";
+import { FEATURED_FLAVORS, INSTAGRAM_PHOTOS, PARTNERS, Flavor } from "@/lib/flavors-data";
 import { FlavorCard } from "@/components/FlavorCard";
 import { OrderDrawer } from "@/components/OrderDrawer";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -451,6 +451,46 @@ export default function HomePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* CORPORATE PARTNERS & ALLIANCES LOGO BAR */}
+      <section className="py-16 bg-white/90 border-t border-pink-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center space-y-2">
+            <span className="px-4 py-1.5 rounded-full bg-pink-100 text-pink-700 font-extrabold text-xs tracking-wider uppercase">
+              Corporate Ecosystem 🤝
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+              Our Trusted Corporate Partners & Alliances
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto font-medium">
+              Collaborating with regional leaders in logistics, payment processing, retail malls, and organic farming.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 items-center justify-center">
+            {PARTNERS.map((partner) => (
+              <div
+                key={partner.id}
+                className="p-4 rounded-2xl bg-slate-50 border border-pink-100 hover:border-pink-300 hover:bg-white hover:shadow-md transition-all flex flex-col items-center justify-center h-28 group"
+                title={`${partner.name} (${partner.badgeText})`}
+              >
+                <div className="relative w-full h-14">
+                  <Image
+                    src={partner.logoPath}
+                    alt={partner.name}
+                    fill
+                    sizes="150px"
+                    className="object-contain group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <span className="text-[10px] font-bold text-slate-500 mt-1 text-center truncate max-w-full">
+                  {partner.name.split(" ")[0]}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

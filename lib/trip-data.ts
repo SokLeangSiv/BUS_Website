@@ -20,6 +20,7 @@ export interface TripReport {
   tripNumber: number;
   title: string;
   destination: string;
+  imagePath: string;
   dateRange: string;
   duration: string;
   purpose: string;
@@ -46,6 +47,7 @@ export const TRIP_REPORTS: TripReport[] = [
     tripNumber: 1,
     title: "Trip 1 — Sihanoukville Investor Meetings",
     destination: "Sihanoukville, Cambodia",
+    imagePath: "/images/trip_sihanoukville.png",
     dateRange: "5–6 February 2026",
     duration: "2 days / 1 night",
     purpose: "Meet two potential investors for cold-chain delivery & retail kiosk expansion",
@@ -81,6 +83,7 @@ export const TRIP_REPORTS: TripReport[] = [
     tripNumber: 2,
     title: "Trip 2 — Siem Reap Branch Expansion Assessment",
     destination: "Siem Reap, Cambodia",
+    imagePath: "/images/trip_siemreap.png",
     dateRange: "9–13 March 2026",
     duration: "5 days / 4 nights",
     purpose: "Identify the optimal retail branch location for expansion",
@@ -122,6 +125,7 @@ export const TRIP_REPORTS: TripReport[] = [
     tripNumber: 3,
     title: "Trip 3 — Mondulkiri Heritage & Master Baker Interview",
     destination: "Sen Monorom, Mondulkiri, Cambodia",
+    imagePath: "/images/trip_mondulkiri.png",
     dateRange: "6–8 April 2026",
     duration: "3 days / 2 nights",
     purpose: "Interview retired Head Pastry Chef for company magazine & document heritage recipes",
@@ -163,6 +167,7 @@ export const TRIP_REPORTS: TripReport[] = [
     tripNumber: 4,
     title: "Trip 4 — Malaysia International AI in Workplace Conference",
     destination: "Kuala Lumpur, Malaysia",
+    imagePath: "/images/trip_malaysia.png",
     dateRange: "18–20 May 2026",
     duration: "3 days / 2 nights",
     purpose: "Explore practical AI tools for sales forecasting, inventory control, and customer experience",
@@ -199,6 +204,7 @@ export const TRIP_REPORTS: TripReport[] = [
     tripNumber: 5,
     title: "Trip 5 — Singapore Social Media Marketing Research",
     destination: "Singapore",
+    imagePath: "/images/trip_singapore.png",
     dateRange: "11–12 June 2026",
     duration: "2 days / 1 night",
     purpose: "Study modern short-form video strategies, social commerce, and micro-influencers",

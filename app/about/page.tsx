@@ -1,7 +1,8 @@
 import React from "react";
 import Metadata from "next";
-import { TEAM_MEMBERS } from "@/lib/flavors-data";
+import { TEAM_MEMBERS, PARTNERS } from "@/lib/flavors-data";
 import { TeamCard } from "@/components/TeamCard";
+import { PartnerCard } from "@/components/PartnerCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SprinklesBackground } from "@/components/SprinklesBackground";
 import { Heart, Target, Compass, ShieldCheck, Globe, Handshake, Sprout, Sparkles } from "lucide-react";
@@ -21,7 +22,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-700 text-xs font-bold shadow-xs">
             <Heart className="w-4 h-4 text-pink-500 fill-pink-500" />
-            <span>Our Company Profile & Story 👑</span>
+            <span>Established 2024 • Our Company Profile & Story 👑</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
@@ -32,7 +33,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-medium">
-            At <strong>Five Slices Cheesecake Co.</strong>, we blend artisanal baking with local ingredient pride, disciplined expansion planning, and warm customer care.
+            Established in 2024 in Phnom Penh, <strong>Five Slices Cheesecake Co.</strong> blends artisanal baking with local ingredient pride, disciplined expansion planning, and warm customer care.
           </p>
         </div>
       </section>
@@ -68,7 +69,7 @@ export default function AboutPage() {
             subtitle="Our executive team coordinates strategy, market research, financial planning, logistics, and communications to scale our bakery brand."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {TEAM_MEMBERS.map((member, index) => (
               <TeamCard key={index} member={member} />
             ))}
@@ -229,39 +230,13 @@ export default function AboutPage() {
             <SectionHeading
               badge="Business Ecosystem"
               title="Partners & Alliances"
-              subtitle="Working alongside retail and hospitality partners to test new kiosk and supply formats."
+              subtitle="Strategic collaborations across retail malls, logistics networks, digital payments, and organic farm sourcing."
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="p-6 rounded-3xl glass-card border border-pink-200 flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-pink-100 text-pink-600 shrink-0">
-                  <Handshake className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-extrabold text-lg text-slate-900">
-                    Coastal Hospitality Ventures
-                  </h4>
-                  <p className="text-xs text-pink-600 font-bold mb-1">Lead Partner: Ms. Dara Chenda</p>
-                  <p className="text-xs text-slate-600">
-                    Exploring hotel/restaurant cheesecake supply contracts and equipment chiller investment ($75,000 potential pipeline).
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-3xl glass-card border border-pink-200 flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-purple-100 text-purple-600 shrink-0">
-                  <Handshake className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-extrabold text-lg text-slate-900">
-                    Seaside Retail Partners
-                  </h4>
-                  <p className="text-xs text-purple-600 font-bold mb-1">Lead Partner: Mr. Lim Vannak</p>
-                  <p className="text-xs text-slate-600">
-                    Partnering on a 3-month pop-up kiosk pilot at Ochheuteal Beach Road to test direct retail sales.
-                  </p>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {PARTNERS.map((partner) => (
+                <PartnerCard key={partner.id} partner={partner} />
+              ))}
             </div>
           </div>
 

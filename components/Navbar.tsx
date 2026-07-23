@@ -45,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
             <p className="text-[11px] text-pink-400 font-medium tracking-wide">
-              Handcrafted Cheesecake Boutique
+              Handcrafted Cheesecake Boutique • Est. 2024
             </p>
           </div>
         </Link>

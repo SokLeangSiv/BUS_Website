@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   TRIP_REPORTS,
   CONSOLIDATED_RECOMMENDATIONS,
@@ -90,7 +91,7 @@ export default function TripReportsPage() {
             <Cake className="w-8 h-8 text-pink-600" />
             <div>
               <h1 className="font-heading font-extrabold text-2xl text-pink-700">
-                Five Slices Cheesecake Co.
+                Five Slices Cheesecake Co. (Est. 2024)
               </h1>
               <p className="text-xs text-slate-500 font-semibold">
                 Executive Fieldwork Documentation & Expansion Assessment
@@ -305,6 +306,29 @@ export default function TripReportsPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Featured Destination Image Banner */}
+              {report.imagePath && (
+                <div className="relative h-64 sm:h-80 lg:h-[340px] w-full rounded-3xl overflow-hidden shadow-lg border border-pink-200 group">
+                  <Image
+                    src={report.imagePath}
+                    alt={report.title}
+                    fill
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-4 left-5 right-5 text-white flex flex-wrap items-center justify-between gap-2 z-10">
+                    <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-slate-900 font-extrabold text-xs shadow-md flex items-center gap-1.5 border border-pink-100">
+                      <MapPin className="w-4 h-4 text-pink-600" />
+                      {report.destination}
+                    </span>
+                    <span className="text-xs font-bold text-pink-100 bg-black/40 px-3.5 py-1.5 rounded-full backdrop-blur-sm border border-white/20">
+                      📸 Fieldwork Location Archive
+                    </span>
+                  </div>
+                </div>
+              )}
 
               {/* Purpose & Location Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/80 p-5 rounded-2xl border border-pink-100">

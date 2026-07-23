@@ -143,7 +143,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     isLeader: false,
     quote: "Building a brand is about blending vision with disciplined execution and heartfelt quality.",
     avatarGradient: "from-pink-400 to-rose-400",
-    imagePath: "/images/team_yinchhay.png",
+    imagePath: "/images/chhay.png",
     bio: "Coordinates strategic growth, investor relations, and operational alignment across Cambodia."
   },
   {
@@ -173,7 +173,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     isLeader: false,
     quote: "Cold-chain precision and fresh ingredient supply are the heartbeat of our kitchens.",
     avatarGradient: "from-rose-400 to-amber-400",
-    imagePath: "/images/team_mengsreang.png",
+    imagePath: "/images/mengsreang.png",
     bio: "Oversees cold-chain logistics, kiosk pilot deployment, and kitchen workflow systems."
   }
 ];
@@ -185,4 +185,155 @@ export const INSTAGRAM_PHOTOS = [
   { title: "Boutique Kiosk Display", tag: "#SihanoukvillePopUp", imagePath: "/images/boutique_kiosk.png" },
   { title: "Signature Caramel Wave", tag: "#MondulkiriHeritage", imagePath: "/images/hero_cheesecake.png" },
   { title: "Pastel Gift Box Set", tag: "#CheesecakeLovers", imagePath: "/images/strawberry_cheesecake.png" }
+];
+
+export interface Partner {
+  id: string;
+  name: string;
+  isInternational: boolean;
+  country: string;
+  flag: string;
+  category: string;
+  leadName?: string;
+  description: string;
+  logoPath: string;
+  badgeText: string;
+}
+
+export const PARTNERS: Partner[] = [
+  // INTERNATIONAL PARTNERS
+  {
+    id: "anchor-dairy",
+    name: "Anchor Food Professionals",
+    isInternational: true,
+    country: "New Zealand",
+    flag: "🇳🇿",
+    category: "Dairy & Ingredient Supplier",
+    leadName: "Fonterra Foodservice APAC",
+    description: "Official international dairy supplier providing premium New Zealand cream cheese for Five Slices' signature texture.",
+    logoPath: "/images/partner_anchor.png",
+    badgeText: "International Dairy Partner"
+  },
+  {
+    id: "suntec-singapore",
+    name: "Suntec Singapore Convention",
+    isInternational: true,
+    country: "Singapore",
+    flag: "🇸🇬",
+    category: "Digital Marketing & Research",
+    leadName: "Asia-Pacific Retail Summit",
+    description: "International partner host for social media research, short-form video strategy, and Gen-Z customer engagement.",
+    logoPath: "/images/trip_singapore.png",
+    badgeText: "Singapore Tech Partner"
+  },
+  {
+    id: "klcc-malaysia",
+    name: "Kuala Lumpur Convention Centre",
+    isInternational: true,
+    country: "Malaysia",
+    flag: "🇲🇾",
+    category: "AI Technology & Demand Systems",
+    leadName: "Asia AI Workplace Summit",
+    description: "International tech exchange partner for weekly AI demand forecasting and smart inventory stock alert systems.",
+    logoPath: "/images/trip_malaysia.png",
+    badgeText: "Malaysia AI Partner"
+  },
+  {
+    id: "schneider-electric",
+    name: "Schneider Electric Cold-Chain",
+    isInternational: true,
+    country: "France / Global",
+    flag: "🇫🇷",
+    category: "Cold-Chain & IoT Technology",
+    leadName: "Smart Logistics Division",
+    description: "Global temperature control sensor & smart chiller monitoring partner ensuring 100% food safety compliance.",
+    logoPath: "/images/value_cold_chain.png",
+    badgeText: "Global Cold-Chain Partner"
+  },
+  
+  // DOMESTIC / NATIONAL PARTNERS
+  {
+    id: "grab-food",
+    name: "GrabFood Cambodia",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Logistics & Rapid Delivery",
+    leadName: "Delivery Partner Network",
+    description: "Official cold-chain dispatch & rapid delivery partner connecting our cloud kitchens directly to customer doorsteps.",
+    logoPath: "/images/partner_grabcambodia.png",
+    badgeText: "Delivery Partner"
+  },
+  {
+    id: "foodpanda",
+    name: "Foodpanda Cambodia",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Logistics & On-Demand Sales",
+    leadName: "On-Demand Delivery Network",
+    description: "Featured bakery merchant partner powering instant slice pre-orders & scheduled catering across city zones.",
+    logoPath: "/images/partner_foodpanda.png",
+    badgeText: "E-Commerce Partner"
+  },
+  {
+    id: "aba-bank",
+    name: "ABA Bank (KHQR)",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Digital Payments & Fintech",
+    leadName: "Fintech & PayWay Integration",
+    description: "Seamless KHQR mobile payment gateway provider for instant, zero-friction online cheesecake pre-orders.",
+    logoPath: "/images/partner_ababank.png",
+    badgeText: "Payment Gateway"
+  },
+  {
+    id: "chip-mong",
+    name: "Chip Mong Supermarket",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Retail Mall & Supermarkets",
+    leadName: "Retail Mall Expansion",
+    description: "Premium supermarket retail placement partner for packaged dessert displays and mall kiosk pop-ups.",
+    logoPath: "/images/partner_chipmong.png",
+    badgeText: "Retail Mall Partner"
+  },
+  {
+    id: "kspsa",
+    name: "Kampong Speu Palm Sugar Association",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Local Sourcing & CSR",
+    leadName: "Organic Farmers Co-op",
+    description: "Direct farm-to-bakery supplier providing 100% certified organic Kampong Speu GI palm sugar caramel glaze.",
+    logoPath: "/images/partner_kspsa.png",
+    badgeText: "GI Organic Sourcing"
+  },
+  {
+    id: "coastal-ventures",
+    name: "Coastal Hospitality Ventures",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Hotel Supply & Investment",
+    leadName: "Ms. Dara Chenda",
+    description: "Strategic hospitality investor partner ($75,000 potential pipeline) for commercial chillers & hotel dessert supply contracts.",
+    logoPath: "/images/partner_coastal_ventures.png",
+    badgeText: "Hotel & Investor Lead"
+  },
+  {
+    id: "seaside-retail",
+    name: "Seaside Retail Partners",
+    isInternational: false,
+    country: "Cambodia",
+    flag: "🇰🇭",
+    category: "Coastal Retail Kiosks",
+    leadName: "Mr. Lim Vannak",
+    description: "Kiosk retail partner hosting a 3-month seaside pop-up kiosk test along Ochheuteal Beach Road, Sihanoukville.",
+    logoPath: "/images/partner_seaside_retail.png",
+    badgeText: "Seaside Kiosk Partner"
+  }
 ];
