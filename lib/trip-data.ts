@@ -125,7 +125,7 @@ export const TRIP_REPORTS: TripReport[] = [
         categoryBadge: "Tourist Zone Analysis"
       },
       {
-        title: "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch (Score 4.4/5)",
+        title: "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch",
         imagePath: "/images/act_sr_2.jpg",
         categoryBadge: "Recommended Flagship Location"
       },
@@ -140,7 +140,7 @@ export const TRIP_REPORTS: TripReport[] = [
         categoryBadge: "Main Corridor Inspection"
       },
       {
-        title: "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen (Score 4.2/5)",
+        title: "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen",
         imagePath: "/images/act_sr_5.jpg",
         categoryBadge: "Cloud Kitchen Site"
       }

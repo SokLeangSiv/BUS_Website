@@ -389,6 +389,7 @@ export default function TripReportsPage() {
                               src={img}
                               alt={title}
                               fill
+                              unoptimized
                               sizes="(max-width: 768px) 100vw, 500px"
                               className="object-cover group-hover:scale-105 transition-transform duration-700 p-0.5"
                             />
