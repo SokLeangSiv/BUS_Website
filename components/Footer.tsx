@@ -157,7 +157,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-pink-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2024–2026 Five Slices Cheesecake Co. (Established 2024). All rights reserved.</p>
+          <p>© 2024–2026 Five Slices Cheesecake Co. All rights reserved.</p>
           <div className="flex items-center gap-2 font-medium">
             <span>Led with</span>
             <Heart className="w-4 h-4 fill-rose-500 text-rose-500 animate-bounce" />

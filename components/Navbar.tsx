@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
             <p className="text-[10px] sm:text-[11px] text-pink-400 font-semibold tracking-wide whitespace-nowrap">
-              Handcrafted Cheesecake Boutique • Est. 2024
+              Handcrafted Cheesecake Boutique
             </p>
           </div>
         </Link>
