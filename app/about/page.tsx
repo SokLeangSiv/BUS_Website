@@ -114,27 +114,47 @@ export default function AboutPage() {
             </div>
 
             {/* Core Values */}
-            <div className="p-8 rounded-3xl glass-card border border-pink-200 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center">
-                <ShieldCheck className="w-6 h-6" />
+            <div className="p-8 rounded-3xl glass-card border border-pink-200 space-y-5 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-4">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="font-heading font-extrabold text-2xl text-slate-900">
+                  Core Values
+                </h3>
               </div>
-              <h3 className="font-heading font-extrabold text-2xl text-slate-900">
-                Core Values
-              </h3>
-              <ul className="text-xs text-slate-600 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                  <strong>Craftsmanship:</strong> Precise baking temperatures and recipe discipline.
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                  <strong>Local Ingredients:</strong> Kampong Speu organic palm sugar.
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                  <strong>Measured Growth:</strong> Data-backed location selection and budgeting.
-                </li>
-              </ul>
+
+              <div className="space-y-3">
+                <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-100 space-y-1">
+                  <span className="text-xs font-extrabold text-amber-950 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>Craftsmanship</span>
+                  </span>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                    Precise baking temperatures and recipe discipline.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-100 space-y-1">
+                  <span className="text-xs font-extrabold text-amber-950 flex items-center gap-1.5">
+                    <Heart className="w-3.5 h-3.5 text-pink-500 shrink-0" />
+                    <span>Local Ingredients</span>
+                  </span>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                    Kampong Speu organic GI certified palm sugar.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-100 space-y-1">
+                  <span className="text-xs font-extrabold text-amber-950 flex items-center gap-1.5">
+                    <Target className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Measured Growth</span>
+                  </span>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                    Data-backed location selection and budgeting.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

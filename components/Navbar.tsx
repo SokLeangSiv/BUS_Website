@@ -201,20 +201,20 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right CTA Actions Bar */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 shrink-0 ml-auto">
           
           {/* Sweet Rain Toggle Button */}
           {onToggleSweetRain && (
             <button
               onClick={onToggleSweetRain}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-extrabold transition-all duration-300 border ${
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-extrabold transition-all duration-300 border shadow-xs ${
                 sweetRainEnabled
-                  ? "bg-pink-100 text-pink-700 border-pink-300 hover:bg-pink-200 shadow-2xs"
-                  : "bg-slate-100 text-slate-500 border-slate-200 hover:bg-slate-200"
+                  ? "bg-pink-100/90 text-pink-800 border-pink-300 hover:bg-pink-200 shadow-pink-100"
+                  : "bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200"
               }`}
               title="Toggle Sweet Rain Animation"
             >
-              <span>🍰</span>
+              <span className="text-sm">🍰</span>
               <span>Rain: {sweetRainEnabled ? "ON ✨" : "OFF"}</span>
             </button>
           )}
@@ -222,7 +222,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Order Slices Button */}
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white font-bold text-sm shadow-md shadow-pink-200 hover:shadow-lg hover:shadow-pink-300 hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden"
+            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 text-white font-extrabold text-sm shadow-md shadow-pink-200 hover:shadow-lg hover:shadow-pink-300 hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden shrink-0 border border-white/40"
           >
             <span className="relative z-10 flex items-center gap-2">
               <ShoppingBag className="w-4 h-4" /> Order Slices
