@@ -61,7 +61,7 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM SECTION */}
-      <section className="py-20">
+      <section id="team" className="scroll-mt-28 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Leadership Team"
@@ -222,7 +222,7 @@ export default function AboutPage() {
       </section>
 
       {/* COMPANY ACHIEVEMENTS & MILESTONES */}
-      <section className="py-16 bg-gradient-to-br from-slate-900 via-rose-950 to-slate-900 text-white relative overflow-hidden">
+      <section id="achievements" className="scroll-mt-28 py-16 bg-gradient-to-br from-slate-900 via-rose-950 to-slate-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           <div className="text-center space-y-3">
             <span className="px-4 py-1.5 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-extrabold text-xs tracking-wider uppercase">
@@ -281,11 +281,11 @@ export default function AboutPage() {
       </section>
 
       {/* SEPARATED PARTNERS SECTION (INTERNATIONAL & CAMBODIAN) */}
-      <section className="py-20 bg-white/90 border-t border-pink-100 space-y-20">
+      <section id="partners" className="scroll-mt-28 py-20 bg-white/90 border-t border-pink-100 space-y-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           {/* SECTION 1: INTERNATIONAL PARTNERS */}
-          <div className="space-y-8">
+          <div id="international-partners" className="scroll-mt-28 space-y-8">
             <div className="border-b border-sky-200 pb-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 text-sky-900 font-extrabold text-xs shadow-xs mb-3 border border-sky-300">
                 <Globe className="w-4 h-4 text-sky-600" />
@@ -307,7 +307,7 @@ export default function AboutPage() {
           </div>
 
           {/* SECTION 2: CAMBODIAN NATIONAL PARTNERS */}
-          <div className="space-y-8 pt-8 border-t border-pink-200">
+          <div id="local-partners" className="scroll-mt-28 space-y-8 pt-8 border-t border-pink-200">
             <div className="border-b border-pink-200 pb-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100 text-pink-900 font-extrabold text-xs shadow-xs mb-3 border border-pink-300">
                 <span>🇰🇭</span>

@@ -272,7 +272,7 @@ export default function TripReportsPage() {
             <div
               key={report.id}
               id={report.slug}
-              className="rounded-3xl glass-card border-2 border-pink-200 p-6 sm:p-10 shadow-xl space-y-8 relative overflow-hidden transition-all duration-300 print:shadow-none print:border-slate-300 print:p-4 print-page-break"
+              className="scroll-mt-28 rounded-3xl glass-card border-2 border-pink-200 p-6 sm:p-10 shadow-xl space-y-8 relative overflow-hidden transition-all duration-300 print:shadow-none print:border-slate-300 print:p-4 print-page-break"
             >
               {/* Top Bar Header */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-pink-200/80 pb-6">
