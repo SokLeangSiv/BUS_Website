@@ -14,6 +14,12 @@ export interface LocationScore {
   notes?: string;
 }
 
+export interface ActivityItem {
+  title: string;
+  imagePath: string;
+  categoryBadge?: string;
+}
+
 export interface TripReport {
   id: string;
   slug: string;
@@ -26,7 +32,7 @@ export interface TripReport {
   purpose: string;
   locationDetails: string;
   overview: string;
-  activities: string[];
+  activities: ActivityItem[];
   highlights: string[];
   keyFindings: string[];
   expenses: ExpenseItem[];
@@ -55,10 +61,26 @@ export const TRIP_REPORTS: TripReport[] = [
     locationDetails: "Seaside Business Lounge & Coastal Investment Hub (Ochheuteal Beach Rd / Independence Beach Rd)",
     overview: "The executive team traveled to Sihanoukville to meet with prospective strategic investors. Discussions focused on securing seed/growth financing for a specialized cold-chain delivery system, launching a seaside retail kiosk, and scaling B2B hotel/restaurant supply contracts.",
     activities: [
-      "Meeting at Seaside Business Lounge with prospective hospitality investors",
-      "Meeting at Coastal Investment Hub regarding commercial chiller financing",
-      "Presenting 4 signature cheesecake flavors (Classic NY, Mango Passion, Khmer Palm Sugar, Chocolate Coffee)",
-      "Conducting live tasting sessions & establishing temperature-controlled dispatch standards"
+      {
+        title: "Meeting at Seaside Business Lounge with prospective hospitality investors",
+        imagePath: "/images/partner_seaside_retail.png",
+        categoryBadge: "Investor Pitch & Kiosk Deal"
+      },
+      {
+        title: "Meeting at Coastal Investment Hub regarding commercial chiller financing",
+        imagePath: "/images/partner_coastal_ventures.png",
+        categoryBadge: "Hotel B2B & Capital Pipeline"
+      },
+      {
+        title: "Presenting 4 signature cheesecake flavors (Classic NY, Mango Passion, Khmer Palm Sugar, Chocolate Coffee)",
+        imagePath: "/images/hero_cheesecake.png",
+        categoryBadge: "Product Tasting Showcase"
+      },
+      {
+        title: "Conducting live tasting sessions & establishing temperature-controlled dispatch standards",
+        imagePath: "/images/value_cold_chain.png",
+        categoryBadge: "Cold-Chain Quality Control"
+      }
     ],
     highlights: [
       "Ms. Dara Chenda (Coastal Hospitality Ventures) expressed up to $75,000 in non-binding investment interest for cold-chain equipment, commercial chillers, and hotel supply contracts.",
@@ -97,11 +119,31 @@ export const TRIP_REPORTS: TripReport[] = [
     locationDetails: "Evaluated 5 distinct commercial zones in Siem Reap municipality",
     overview: "The team conducted a comprehensive 5-day market assessment across 5 key zones in Siem Reap. We systematically evaluated foot traffic density, rental rates, accessibility for tourists, delivery dispatch convenience, and competitive landscape. Over 40 interviews were conducted with local residents, hotel staff, tuk-tuk drivers, and retail business owners.",
     activities: [
-      "Evaluating the Old Market and Pub Street area for tourist foot traffic density",
-      "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch",
-      "Surveying Taphul Road for affordable retail store options",
-      "Surveying National Road 6 for main-road visibility and vehicle accessibility",
-      "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen"
+      {
+        title: "Evaluating the Old Market and Pub Street area for tourist foot traffic density",
+        imagePath: "/images/trip_siemreap.png",
+        categoryBadge: "Tourist Zone Analysis"
+      },
+      {
+        title: "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch (Score 4.4/5)",
+        imagePath: "/images/flavor_palm_sugar.png",
+        categoryBadge: "Recommended Flagship Location"
+      },
+      {
+        title: "Surveying Taphul Road for affordable retail store options",
+        imagePath: "/images/flavor_mango.png",
+        categoryBadge: "Retail Rental Survey"
+      },
+      {
+        title: "Surveying National Road 6 for main-road visibility and vehicle accessibility",
+        imagePath: "/images/flavor_classic_ny.png",
+        categoryBadge: "Main Corridor Inspection"
+      },
+      {
+        title: "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen (Score 4.2/5)",
+        imagePath: "/images/flavor_chocolate.png",
+        categoryBadge: "Cloud Kitchen Site"
+      }
     ],
     highlights: [
       "Assessed 5 commercial areas using a standardized 5-point evaluation matrix.",
@@ -152,10 +194,26 @@ export const TRIP_REPORTS: TripReport[] = [
       address: "No. 27, Romonea Village, Sangkat Spean Meanchey, Sen Monorom"
     },
     activities: [
-      "Interviewing retired Head Pastry Chef Vichea Sok at his private residence in Sen Monorom",
-      "Recording high-fidelity audio of the masterclass oral history interview",
-      "Capturing professional archival portrait photographs of Chef Vichea",
-      "Reviewing and scanning selected historical recipe notes & baking blueprints"
+      {
+        title: "Interviewing retired Head Pastry Chef Vichea Sok at his private residence in Sen Monorom",
+        imagePath: "/images/trip_mondulkiri.png",
+        categoryBadge: "Masterclass Interview"
+      },
+      {
+        title: "Recording high-fidelity audio of the masterclass oral history interview",
+        imagePath: "/images/chhay.png",
+        categoryBadge: "Audio Archival Documentation"
+      },
+      {
+        title: "Capturing professional archival portrait photographs of Chef Vichea",
+        imagePath: "/images/leangsiv.png",
+        categoryBadge: "Heritage Photography"
+      },
+      {
+        title: "Reviewing and scanning selected historical recipe notes & baking blueprints",
+        imagePath: "/images/mengsreang.png",
+        categoryBadge: "Historical Recipe Vault"
+      }
     ],
     highlights: [
       "Documented the humble beginnings of Five Slices' first cheesecake, baked in a small shared oven and sold through word-of-mouth.",
@@ -194,10 +252,26 @@ export const TRIP_REPORTS: TripReport[] = [
     locationDetails: "Kuala Lumpur Convention Centre (KLCC), Malaysia",
     overview: "The team attended the Asia-Pacific AI in the Workplace Summit in Kuala Lumpur to evaluate scalable digital technologies for food retail operations. Key focuses included AI demand forecasting, smart inventory alerts, automated customer service, and responsible AI governance.",
     activities: [
-      "Attending a sales & demand-forecasting AI session at Kuala Lumpur Convention Centre (KLCC)",
-      "Participating in an AI retail-operations & smart barcode inventory workshop",
-      "Attending an automated AI customer-service chatbot panel",
-      "B2B networking meetings with software vendors and regional bakery franchise operators"
+      {
+        title: "Attending a sales & demand-forecasting AI session at Kuala Lumpur Convention Centre (KLCC)",
+        imagePath: "/images/partner_klcc.svg",
+        categoryBadge: "AI Demand Forecasting"
+      },
+      {
+        title: "Participating in an AI retail-operations & smart barcode inventory workshop",
+        imagePath: "/images/partner_schneider.svg",
+        categoryBadge: "Smart Inventory Tech"
+      },
+      {
+        title: "Attending an automated AI customer-service chatbot panel",
+        imagePath: "/images/trip_malaysia.png",
+        categoryBadge: "Customer AI Automation"
+      },
+      {
+        title: "B2B networking meetings with software vendors and regional bakery franchise operators",
+        imagePath: "/images/partner_suntec.svg",
+        categoryBadge: "Regional B2B Networking"
+      }
     ],
     highlights: [
       "Attended hands-on sessions on demand forecasting integrating historical sales, weather patterns, local holidays, and marketing promos to reduce bakery waste.",
@@ -237,10 +311,26 @@ export const TRIP_REPORTS: TripReport[] = [
     locationDetails: "Suntec Singapore Convention & Exhibition Centre",
     overview: "The team participated in an international research presentation and workshop on cutting-edge digital marketing in Southeast Asia. Focus areas included short-form video dynamics, micro-influencer ROI, social commerce conversion, and building brand affinity among Gen Z and young millennial audiences.",
     activities: [
-      "Attending business research presentations at Suntec Singapore Convention & Exhibition Centre",
-      "Analyzing 3-second hook short-form video strategies for dessert brands",
-      "Researching micro-influencer partnership ROI & creator collaboration frameworks",
-      "Reviewing social-commerce metrics, conversion funnels, and performance analytics"
+      {
+        title: "Attending business research presentations at Suntec Singapore Convention & Exhibition Centre",
+        imagePath: "/images/partner_suntec.svg",
+        categoryBadge: "Digital Retail Research"
+      },
+      {
+        title: "Analyzing 3-second hook short-form video strategies for dessert brands",
+        imagePath: "/images/partner_tiktok.svg",
+        categoryBadge: "Viral Video Strategy"
+      },
+      {
+        title: "Researching micro-influencer partnership ROI & creator collaboration frameworks",
+        imagePath: "/images/trip_singapore.png",
+        categoryBadge: "Creator Network Marketing"
+      },
+      {
+        title: "Reviewing social-commerce metrics, conversion funnels, and performance analytics",
+        imagePath: "/images/partner_grabcambodia.png",
+        categoryBadge: "E-Commerce Funnel Analytics"
+      }
     ],
     highlights: [
       "Analyzed top-performing food videos: emphasis on 3-second hooks featuring cake slicing, gooey texture reveals, and behind-the-scenes decorating.",

@@ -363,22 +363,62 @@ export default function TripReportsPage() {
 
               {/* Logged Activities & Visual Image Tracking */}
               {report.activities && report.activities.length > 0 && (
-                <div className="space-y-3 bg-gradient-to-r from-pink-50/80 via-rose-50/50 to-amber-50/50 p-5 rounded-2xl border border-pink-200">
-                  <div className="flex items-center justify-between gap-2">
-                    <h3 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
-                      <span>📸 Logged Fieldwork Activities ({report.activities.length} Visual Tasks)</span>
-                    </h3>
-                    <span className="text-[11px] font-extrabold text-pink-700 bg-white px-3 py-1 rounded-full border border-pink-200 shadow-2xs">
-                      1 Image / Activity Logged
+                <div className="space-y-4 bg-gradient-to-br from-slate-900 via-pink-950 to-slate-900 text-white p-6 sm:p-8 rounded-3xl border border-pink-500/30 shadow-xl">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pink-500/30 pb-4">
+                    <div>
+                      <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider block">
+                        📸 Visual Activity Database & Image Logs
+                      </span>
+                      <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white">
+                        Logged Fieldwork Activities ({report.activities.length} Visual Tasks)
+                      </h3>
+                    </div>
+                    <span className="text-xs font-extrabold text-pink-300 bg-pink-500/20 px-3.5 py-1.5 rounded-full border border-pink-400/40 w-fit">
+                      Exactly 1 High-Quality Image / Activity
                     </span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                    {report.activities.map((act, actIdx) => (
-                      <div key={actIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-700 bg-white/90 p-3 rounded-xl border border-pink-100/90 shadow-2xs">
-                        <span className="text-pink-500 font-extrabold text-xs shrink-0 mt-0.5">#{actIdx + 1}</span>
-                        <span>{act}</span>
-                      </div>
-                    ))}
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 pt-2">
+                    {report.activities.map((actItem, actIdx) => {
+                      const title = typeof actItem === "string" ? actItem : actItem.title;
+                      const img = typeof actItem === "string" ? report.imagePath : actItem.imagePath;
+                      const badge = typeof actItem === "string" ? `Activity #${actIdx + 1}` : (actItem.categoryBadge || `Activity #${actIdx + 1}`);
+
+                      return (
+                        <div
+                          key={actIdx}
+                          className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 p-4 flex flex-col justify-between space-y-3 hover:bg-white/15 hover:border-pink-300/50 transition-all duration-300 shadow-lg"
+                        >
+                          {/* Activity Large Photo Frame */}
+                          <div className="relative h-48 sm:h-56 lg:h-64 w-full rounded-2xl overflow-hidden bg-slate-950 border border-white/20 shadow-md">
+                            <Image
+                              src={img}
+                              alt={title}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 500px"
+                              className="object-cover group-hover:scale-105 transition-transform duration-700 p-0.5"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/30" />
+
+                            <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-amber-300 text-[11px] font-extrabold border border-amber-300/40 shadow-xs">
+                              {badge}
+                            </span>
+
+                            <span className="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-full bg-pink-500/80 backdrop-blur-md text-white text-[10px] font-bold border border-white/30">
+                              📷 Activity #{actIdx + 1}
+                            </span>
+                          </div>
+
+                          {/* Activity Title Description */}
+                          <div className="flex items-start gap-2 text-xs sm:text-sm font-semibold text-slate-100 leading-snug">
+                            <span className="w-5 h-5 rounded-full bg-pink-500/30 border border-pink-400 text-pink-300 text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">
+                              {actIdx + 1}
+                            </span>
+                            <span>{title}</span>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
