@@ -398,17 +398,10 @@ export default function TripReportsPage() {
                             <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-amber-300 text-[11px] font-extrabold border border-amber-300/40 shadow-xs">
                               {badge}
                             </span>
-
-                            <span className="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-full bg-pink-500/80 backdrop-blur-md text-white text-[10px] font-bold border border-white/30">
-                              📷 Activity #{actIdx + 1}
-                            </span>
                           </div>
 
                           {/* Activity Title Description */}
-                          <div className="flex items-start gap-2 text-xs sm:text-sm font-semibold text-slate-100 leading-snug">
-                            <span className="w-5 h-5 rounded-full bg-pink-500/30 border border-pink-400 text-pink-300 text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">
-                              {actIdx + 1}
-                            </span>
+                          <div className="text-xs sm:text-sm font-semibold text-slate-100 leading-snug">
                             <span>{title}</span>
                           </div>
                         </div>
