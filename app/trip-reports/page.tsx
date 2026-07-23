@@ -361,6 +361,28 @@ export default function TripReportsPage() {
                 </p>
               </div>
 
+              {/* Logged Activities & Visual Image Tracking */}
+              {report.activities && report.activities.length > 0 && (
+                <div className="space-y-3 bg-gradient-to-r from-pink-50/80 via-rose-50/50 to-amber-50/50 p-5 rounded-2xl border border-pink-200">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span>📸 Logged Fieldwork Activities ({report.activities.length} Visual Tasks)</span>
+                    </h3>
+                    <span className="text-[11px] font-extrabold text-pink-700 bg-white px-3 py-1 rounded-full border border-pink-200 shadow-2xs">
+                      1 Image / Activity Logged
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                    {report.activities.map((act, actIdx) => (
+                      <div key={actIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-700 bg-white/90 p-3 rounded-xl border border-pink-100/90 shadow-2xs">
+                        <span className="text-pink-500 font-extrabold text-xs shrink-0 mt-0.5">#{actIdx + 1}</span>
+                        <span>{act}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Special Interviewee Card if Mondulkiri */}
               {report.interviewee && (
                 <div className="p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-rose-50 to-pink-50 border-2 border-amber-200 space-y-3">

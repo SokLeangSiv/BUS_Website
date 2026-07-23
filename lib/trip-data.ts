@@ -26,6 +26,7 @@ export interface TripReport {
   purpose: string;
   locationDetails: string;
   overview: string;
+  activities: string[];
   highlights: string[];
   keyFindings: string[];
   expenses: ExpenseItem[];
@@ -53,6 +54,12 @@ export const TRIP_REPORTS: TripReport[] = [
     purpose: "Meet two potential investors for cold-chain delivery & retail kiosk expansion",
     locationDetails: "Seaside Business Lounge & Coastal Investment Hub (Ochheuteal Beach Rd / Independence Beach Rd)",
     overview: "The executive team traveled to Sihanoukville to meet with prospective strategic investors. Discussions focused on securing seed/growth financing for a specialized cold-chain delivery system, launching a seaside retail kiosk, and scaling B2B hotel/restaurant supply contracts.",
+    activities: [
+      "Meeting at Seaside Business Lounge with prospective hospitality investors",
+      "Meeting at Coastal Investment Hub regarding commercial chiller financing",
+      "Presenting 4 signature cheesecake flavors (Classic NY, Mango Passion, Khmer Palm Sugar, Chocolate Coffee)",
+      "Conducting live tasting sessions & establishing temperature-controlled dispatch standards"
+    ],
     highlights: [
       "Ms. Dara Chenda (Coastal Hospitality Ventures) expressed up to $75,000 in non-binding investment interest for cold-chain equipment, commercial chillers, and hotel supply contracts.",
       "Mr. Lim Vannak (Seaside Retail Partners) proposed a low-risk pilot kiosk partnership featuring a 3-month sales test at a high-foot-traffic coastal promenade.",
@@ -89,6 +96,13 @@ export const TRIP_REPORTS: TripReport[] = [
     purpose: "Identify the optimal retail branch location for expansion",
     locationDetails: "Evaluated 5 distinct commercial zones in Siem Reap municipality",
     overview: "The team conducted a comprehensive 5-day market assessment across 5 key zones in Siem Reap. We systematically evaluated foot traffic density, rental rates, accessibility for tourists, delivery dispatch convenience, and competitive landscape. Over 40 interviews were conducted with local residents, hotel staff, tuk-tuk drivers, and retail business owners.",
+    activities: [
+      "Evaluating the Old Market and Pub Street area for tourist foot traffic density",
+      "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch",
+      "Surveying Taphul Road for affordable retail store options",
+      "Surveying National Road 6 for main-road visibility and vehicle accessibility",
+      "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen"
+    ],
     highlights: [
       "Assessed 5 commercial areas using a standardized 5-point evaluation matrix.",
       "Identified Wat Bo Road as the premier candidate for Five Slices' flagship boutique branch due to its vibrant mix of upscale boutique hotels, dining crowd, and favorable delivery logistics.",
@@ -137,6 +151,12 @@ export const TRIP_REPORTS: TripReport[] = [
       yearsOfService: 18,
       address: "No. 27, Romonea Village, Sangkat Spean Meanchey, Sen Monorom"
     },
+    activities: [
+      "Interviewing retired Head Pastry Chef Vichea Sok at his private residence in Sen Monorom",
+      "Recording high-fidelity audio of the masterclass oral history interview",
+      "Capturing professional archival portrait photographs of Chef Vichea",
+      "Reviewing and scanning selected historical recipe notes & baking blueprints"
+    ],
     highlights: [
       "Documented the humble beginnings of Five Slices' first cheesecake, baked in a small shared oven and sold through word-of-mouth.",
       "Recorded Chef Vichea's core principles: precise ingredient weighing, strict oven temperature discipline, and patience over shortcuts.",
@@ -173,6 +193,12 @@ export const TRIP_REPORTS: TripReport[] = [
     purpose: "Explore practical AI tools for sales forecasting, inventory control, and customer experience",
     locationDetails: "Kuala Lumpur Convention Centre (KLCC), Malaysia",
     overview: "The team attended the Asia-Pacific AI in the Workplace Summit in Kuala Lumpur to evaluate scalable digital technologies for food retail operations. Key focuses included AI demand forecasting, smart inventory alerts, automated customer service, and responsible AI governance.",
+    activities: [
+      "Attending a sales & demand-forecasting AI session at Kuala Lumpur Convention Centre (KLCC)",
+      "Participating in an AI retail-operations & smart barcode inventory workshop",
+      "Attending an automated AI customer-service chatbot panel",
+      "B2B networking meetings with software vendors and regional bakery franchise operators"
+    ],
     highlights: [
       "Attended hands-on sessions on demand forecasting integrating historical sales, weather patterns, local holidays, and marketing promos to reduce bakery waste.",
       "Explored automated barcode inventory systems that trigger real-time reorder alerts for critical fresh ingredients (cream cheese, butter, eggs, fruit purees).",
@@ -210,6 +236,12 @@ export const TRIP_REPORTS: TripReport[] = [
     purpose: "Study modern short-form video strategies, social commerce, and micro-influencers",
     locationDetails: "Suntec Singapore Convention & Exhibition Centre",
     overview: "The team participated in an international research presentation and workshop on cutting-edge digital marketing in Southeast Asia. Focus areas included short-form video dynamics, micro-influencer ROI, social commerce conversion, and building brand affinity among Gen Z and young millennial audiences.",
+    activities: [
+      "Attending business research presentations at Suntec Singapore Convention & Exhibition Centre",
+      "Analyzing 3-second hook short-form video strategies for dessert brands",
+      "Researching micro-influencer partnership ROI & creator collaboration frameworks",
+      "Reviewing social-commerce metrics, conversion funnels, and performance analytics"
+    ],
     highlights: [
       "Analyzed top-performing food videos: emphasis on 3-second hooks featuring cake slicing, gooey texture reveals, and behind-the-scenes decorating.",
       "Structured content strategy around 3 core pillars: Product Desire (60%), Behind-the-Scenes Trust (20%), and Customer Stories (20%).",
