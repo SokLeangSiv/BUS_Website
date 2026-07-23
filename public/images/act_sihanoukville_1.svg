@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_shv1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="glass_shv1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_shv1)"/>
+  <!-- Ocean Sunset Background Elements -->
+  <circle cx="300" cy="220" r="120" fill="#f59e0b" opacity="0.4"/>
+  <path d="M 0 260 Q 150 240, 300 260 T 600 260 L 600 400 L 0 400 Z" fill="#0369a1" opacity="0.7"/>
+  <path d="M 0 290 Q 200 270, 400 300 T 600 290 L 600 400 L 0 400 Z" fill="#075985"/>
+
+  <!-- Seaside Lounge Table & Investor Pitch Visual -->
+  <rect x="80" y="80" width="440" height="240" rx="24" fill="url(#glass_shv1)" stroke="#38bdf8" stroke-width="2"/>
+  
+  <!-- Presentation Board -->
+  <rect x="120" y="110" width="200" height="130" rx="12" fill="#ffffff" opacity="0.95"/>
+  <text x="140" y="140" font-family="system-ui, sans-serif" font-weight="900" font-size="16" fill="#0f172a">SEASIDE KIOSK PITCH</text>
+  <text x="140" y="165" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#0284c7">Investor: Ms. Dara Chenda</text>
+  <text x="140" y="185" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#64748b">Location: Ochheuteal Beach</text>
+  <rect x="140" y="200" width="140" height="20" rx="10" fill="#ec4899"/>
+  <text x="155" y="214" font-family="system-ui, sans-serif" font-weight="800" font-size="10" fill="#ffffff">3-MONTH PILOT TEST</text>
+
+  <!-- Cheesecake Tasting Samples -->
+  <g transform="translate(350, 110)">
+    <rect x="0" y="0" width="140" height="130" rx="16" fill="#ffffff" opacity="0.95"/>
+    <text x="15" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="12" fill="#be185d">Tasting Samples 🍰</text>
+    <circle cx="40" cy="65" r="20" fill="#f59e0b"/>
+    <circle cx="95" cy="65" r="20" fill="#ec4899"/>
+    <circle cx="40" cy="105" r="16" fill="#84cc16"/>
+    <circle cx="95" cy="105" r="16" fill="#78350f"/>
+    <text x="40" y="70" text-anchor="middle" font-size="10" fill="#fff">Palm</text>
+    <text x="95" y="70" text-anchor="middle" font-size="10" fill="#fff">NY</text>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#38bdf8">Task #1: Meeting at Seaside Business Lounge with Hospitality Investors</text>
+</svg>

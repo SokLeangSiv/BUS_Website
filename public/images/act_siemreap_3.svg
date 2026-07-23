@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_sr3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="50%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_sr3)"/>
+
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="480" height="270" rx="28" fill="#ffffff" opacity="0.95"/>
+    <text x="240" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#78350f">TAPHUL ROAD RETAIL STORE SURVEY</text>
+
+    <!-- Score Card -->
+    <rect x="140" y="70" width="200" height="45" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="240" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#b45309">OVERALL: 4.0 / 5.0</text>
+
+    <text x="240" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#92400e">Affordable Rent &amp; Local Resident Access</text>
+    <text x="240" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#78350f">Rent Score: 5.0/5.0 • Tourist Access: 4.0/5.0</text>
+
+    <rect x="80" y="195" width="320" height="36" rx="12" fill="#fffbe6" stroke="#f59e0b"/>
+    <text x="240" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#b45309">Considered as Secondary Value Option</text>
+  </g>
+
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#fbbf24">Task #3: Surveying Taphul Road for Affordable Retail Options</text>
+</svg>

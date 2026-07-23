@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_sr2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_sr2)"/>
+
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="480" height="270" rx="28" fill="#ffffff" opacity="0.95"/>
+    <text x="240" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#065f46">RECOMMENDED FLAGSHIP LOCATION 🏆</text>
+
+    <!-- Wat Bo Score Banner -->
+    <rect x="140" y="65" width="200" height="45" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="240" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#15803d">WAT BO ROAD (4.4/5)</text>
+
+    <!-- 4 Evaluation Metrics -->
+    <g transform="translate(40, 130)">
+      <rect x="0" y="0" width="90" height="90" rx="14" fill="#f0fdf4"/>
+      <text x="45" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#166534">TRAFFIC</text>
+      <text x="45" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#15803d">4.0</text>
+
+      <rect x="100" y="0" width="90" height="90" rx="14" fill="#f0fdf4"/>
+      <text x="145" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#166534">RENTAL</text>
+      <text x="145" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#15803d">4.0</text>
+
+      <rect x="200" y="0" width="90" height="90" rx="14" fill="#f0fdf4"/>
+      <text x="245" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#166534">TOURISTS</text>
+      <text x="245" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#15803d">5.0</text>
+
+      <rect x="300" y="0" width="90" height="90" rx="14" fill="#f0fdf4"/>
+      <text x="345" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#166534">DELIVERY</text>
+      <text x="345" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#15803d">5.0</text>
+    </g>
+  </g>
+
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#34d399">Task #2: Assessing Wat Bo Road Commercial Strip (Flagship Site)</text>
+</svg>

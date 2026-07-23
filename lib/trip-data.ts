@@ -63,22 +63,22 @@ export const TRIP_REPORTS: TripReport[] = [
     activities: [
       {
         title: "Meeting at Seaside Business Lounge with prospective hospitality investors",
-        imagePath: "/images/partner_seaside_retail.png",
+        imagePath: "/images/act_shv_1.jpg",
         categoryBadge: "Investor Pitch & Kiosk Deal"
       },
       {
         title: "Meeting at Coastal Investment Hub regarding commercial chiller financing",
-        imagePath: "/images/partner_coastal_ventures.png",
+        imagePath: "/images/act_shv_2.jpg",
         categoryBadge: "Hotel B2B & Capital Pipeline"
       },
       {
         title: "Presenting 4 signature cheesecake flavors (Classic NY, Mango Passion, Khmer Palm Sugar, Chocolate Coffee)",
-        imagePath: "/images/hero_cheesecake.png",
+        imagePath: "/images/act_shv_3.jpg",
         categoryBadge: "Product Tasting Showcase"
       },
       {
         title: "Conducting live tasting sessions & establishing temperature-controlled dispatch standards",
-        imagePath: "/images/value_cold_chain.png",
+        imagePath: "/images/act_shv_4.jpg",
         categoryBadge: "Cold-Chain Quality Control"
       }
     ],
@@ -121,27 +121,27 @@ export const TRIP_REPORTS: TripReport[] = [
     activities: [
       {
         title: "Evaluating the Old Market and Pub Street area for tourist foot traffic density",
-        imagePath: "/images/trip_siemreap.png",
+        imagePath: "/images/act_sr_1.jpg",
         categoryBadge: "Tourist Zone Analysis"
       },
       {
         title: "Assessing Wat Bo Road commercial strip for customer-facing flagship boutique branch (Score 4.4/5)",
-        imagePath: "/images/flavor_palm_sugar.png",
+        imagePath: "/images/act_sr_2.jpg",
         categoryBadge: "Recommended Flagship Location"
       },
       {
         title: "Surveying Taphul Road for affordable retail store options",
-        imagePath: "/images/flavor_mango.png",
+        imagePath: "/images/act_sr_3.jpg",
         categoryBadge: "Retail Rental Survey"
       },
       {
         title: "Surveying National Road 6 for main-road visibility and vehicle accessibility",
-        imagePath: "/images/flavor_classic_ny.png",
+        imagePath: "/images/act_sr_4.jpg",
         categoryBadge: "Main Corridor Inspection"
       },
       {
         title: "Evaluating Sala Kamreuk corridor for centralized production & delivery cloud kitchen (Score 4.2/5)",
-        imagePath: "/images/flavor_chocolate.png",
+        imagePath: "/images/act_sr_5.jpg",
         categoryBadge: "Cloud Kitchen Site"
       }
     ],
@@ -186,7 +186,7 @@ export const TRIP_REPORTS: TripReport[] = [
     duration: "3 days / 2 nights",
     purpose: "Interview retired Head Pastry Chef for company magazine & document heritage recipes",
     locationDetails: "No. 27, Romonea Village, Sangkat Spean Meanchey, Sen Monorom",
-    overview: "The team traveled to Mondulkiri to record an in-depth oral history and masterclass interview with Mr. Vichea Sok, fictional retired Head Pastry Chef with 18 years of service. The journey captured foundational lessons on recipe craftsmanship, ingredient discipline, food safety pride, and the historic origin of Five Slices' signature Palm Sugar Cheesecake.",
+    overview: "The team traveled to Mondulkiri to record an in-depth oral history and masterclass interview with Mr. Vichea Sok, retired Head Pastry Chef with 18 years of service. The journey captured foundational lessons on recipe craftsmanship, ingredient discipline, food safety pride, and the historic origin of Five Slices' signature Palm Sugar Cheesecake.",
     interviewee: {
       name: "Mr. Vichea Sok",
       role: "Retired Head Pastry Chef",
@@ -196,22 +196,22 @@ export const TRIP_REPORTS: TripReport[] = [
     activities: [
       {
         title: "Interviewing retired Head Pastry Chef Vichea Sok at his private residence in Sen Monorom",
-        imagePath: "/images/trip_mondulkiri.png",
+        imagePath: "/images/act_mdk_1.jpg",
         categoryBadge: "Masterclass Interview"
       },
       {
         title: "Recording high-fidelity audio of the masterclass oral history interview",
-        imagePath: "/images/chhay.png",
+        imagePath: "/images/act_mdk_2.jpg",
         categoryBadge: "Audio Archival Documentation"
       },
       {
         title: "Capturing professional archival portrait photographs of Chef Vichea",
-        imagePath: "/images/leangsiv.png",
+        imagePath: "/images/act_mdk_3.jpg",
         categoryBadge: "Heritage Photography"
       },
       {
         title: "Reviewing and scanning selected historical recipe notes & baking blueprints",
-        imagePath: "/images/mengsreang.png",
+        imagePath: "/images/act_mdk_4.jpg",
         categoryBadge: "Historical Recipe Vault"
       }
     ],
@@ -254,22 +254,22 @@ export const TRIP_REPORTS: TripReport[] = [
     activities: [
       {
         title: "Attending a sales & demand-forecasting AI session at Kuala Lumpur Convention Centre (KLCC)",
-        imagePath: "/images/partner_klcc.svg",
+        imagePath: "/images/act_mys_1.jpg",
         categoryBadge: "AI Demand Forecasting"
       },
       {
         title: "Participating in an AI retail-operations & smart barcode inventory workshop",
-        imagePath: "/images/partner_schneider.svg",
+        imagePath: "/images/act_mys_2.jpg",
         categoryBadge: "Smart Inventory Tech"
       },
       {
         title: "Attending an automated AI customer-service chatbot panel",
-        imagePath: "/images/trip_malaysia.png",
+        imagePath: "/images/act_mys_3.jpg",
         categoryBadge: "Customer AI Automation"
       },
       {
         title: "B2B networking meetings with software vendors and regional bakery franchise operators",
-        imagePath: "/images/partner_suntec.svg",
+        imagePath: "/images/act_mys_4.jpg",
         categoryBadge: "Regional B2B Networking"
       }
     ],
@@ -313,22 +313,22 @@ export const TRIP_REPORTS: TripReport[] = [
     activities: [
       {
         title: "Attending business research presentations at Suntec Singapore Convention & Exhibition Centre",
-        imagePath: "/images/partner_suntec.svg",
+        imagePath: "/images/act_sg_1.jpg",
         categoryBadge: "Digital Retail Research"
       },
       {
         title: "Analyzing 3-second hook short-form video strategies for dessert brands",
-        imagePath: "/images/partner_tiktok.svg",
+        imagePath: "/images/act_sg_2.jpg",
         categoryBadge: "Viral Video Strategy"
       },
       {
         title: "Researching micro-influencer partnership ROI & creator collaboration frameworks",
-        imagePath: "/images/trip_singapore.png",
+        imagePath: "/images/act_sg_3.jpg",
         categoryBadge: "Creator Network Marketing"
       },
       {
         title: "Reviewing social-commerce metrics, conversion funnels, and performance analytics",
-        imagePath: "/images/partner_grabcambodia.png",
+        imagePath: "/images/act_sg_4.jpg",
         categoryBadge: "E-Commerce Funnel Analytics"
       }
     ],

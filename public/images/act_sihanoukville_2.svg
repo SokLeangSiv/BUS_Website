@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_shv2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="gold_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_shv2)"/>
+
+  <!-- Corporate Investment Hub Card -->
+  <rect x="70" y="60" width="460" height="260" rx="28" fill="#ffffff" opacity="0.07" stroke="#6366f1" stroke-width="2"/>
+  
+  <!-- Financial Investment Pipeline Box -->
+  <g transform="translate(100, 90)">
+    <rect x="0" y="0" width="230" height="150" rx="20" fill="#ffffff" opacity="0.95"/>
+    <text x="20" y="35" font-family="system-ui, sans-serif" font-weight="900" font-size="15" fill="#1e1b4b">INVESTMENT PIPELINE</text>
+    <text x="20" y="75" font-family="system-ui, sans-serif" font-weight="900" font-size="34" fill="#d97706">$75,000</text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#4338ca">Coastal Hospitality Lead</text>
+    <rect x="20" y="112" width="180" height="18" rx="9" fill="#e0e7ff"/>
+    <text x="30" y="125" font-family="system-ui, sans-serif" font-weight="800" font-size="10" fill="#3730a3">Commercial Chiller Financing</text>
+  </g>
+
+  <!-- Smart Chiller Graphic -->
+  <g transform="translate(350, 90)">
+    <rect x="0" y="0" width="150" height="150" rx="20" fill="#1e1b4b" stroke="#818cf8" stroke-width="2"/>
+    <rect x="15" y="15" width="120" height="40" rx="10" fill="#312e81"/>
+    <text x="25" y="40" font-family="system-ui, sans-serif" font-weight="800" font-size="13" fill="#38bdf8">TEMP: +3.2°C</text>
+    <rect x="15" y="65" width="120" height="70" rx="10" fill="#ffffff" opacity="0.1"/>
+    <circle cx="45" cy="100" r="14" fill="#fbbf24"/>
+    <circle cx="105" cy="100" r="14" fill="#ec4899"/>
+  </g>
+
+  <!-- Bottom Title -->
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#818cf8">Task #2: Coastal Investment Hub Chiller &amp; B2B Contract Meeting</text>
+</svg>

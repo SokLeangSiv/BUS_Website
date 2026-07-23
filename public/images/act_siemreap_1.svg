@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_sr1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_sr1)"/>
+
+  <rect x="60" y="60" width="480" height="250" rx="24" fill="#ffffff" opacity="0.95"/>
+  <text x="300" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#1e1b4b">OLD MARKET &amp; PUB STREET EVALUATION</text>
+  
+  <g transform="translate(100, 130)">
+    <rect x="0" y="0" width="180" height="130" rx="16" fill="#e0e7ff"/>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="13" fill="#3730a3">TOURIST FOOT TRAFFIC</text>
+    <text x="90" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="32" fill="#4338ca">5.0 / 5.0</text>
+    <text x="90" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="10" fill="#6366f1">Very High Pedestrian Count</text>
+  </g>
+
+  <g transform="translate(320, 130)">
+    <rect x="0" y="0" width="180" height="130" rx="16" fill="#fee2e2"/>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="13" fill="#991b1b">RENTAL COST SCORE</text>
+    <text x="90" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="32" fill="#dc2626">2.0 / 5.0</text>
+    <text x="90" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="10" fill="#ef4444">Excessively High Rent Premium</text>
+  </g>
+
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#818cf8">Task #1: Evaluating Old Market &amp; Pub Street Area Foot Traffic</text>
+</svg>

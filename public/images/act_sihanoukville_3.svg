@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_shv3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="50%" stop-color="#be185d"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg_shv3)"/>
+
+  <!-- 4 Signature Cheesecake Display Box -->
+  <rect x="50" y="50" width="500" height="270" rx="28" fill="#ffffff" opacity="0.95"/>
+  <text x="300" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#831843">4 SIGNATURE CHEESECAKE FLAVORS 🍰</text>
+
+  <g transform="translate(70, 110)">
+    <!-- Flavor 1: Palm Sugar -->
+    <rect x="0" y="0" width="100" height="130" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <circle cx="50" cy="45" r="24" fill="#d97706"/>
+    <text x="50" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#78350f">Khmer Palm</text>
+    <text x="50" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#78350f">Sugar</text>
+
+    <!-- Flavor 2: Classic NY -->
+    <rect x="115" y="0" width="100" height="130" rx="16" fill="#fff1f2" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="165" cy="45" r="24" fill="#f43f5e"/>
+    <text x="165" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#881337">Classic</text>
+    <text x="165" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#881337">New York</text>
+
+    <!-- Flavor 3: Mango Passion -->
+    <rect x="230" y="0" width="100" height="130" rx="16" fill="#fefce8" stroke="#eab308" stroke-width="2"/>
+    <circle cx="280" cy="45" r="24" fill="#eab308"/>
+    <text x="280" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#713f12">Mango</text>
+    <text x="280" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#713f12">Passion</text>
+
+    <!-- Flavor 4: Chocolate Coffee -->
+    <rect x="345" y="0" width="100" height="130" rx="16" fill="#fdf8f6" stroke="#78350f" stroke-width="2"/>
+    <circle cx="395" cy="45" r="24" fill="#451a03"/>
+    <text x="395" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#451a03">Chocolate</text>
+    <text x="395" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="11" fill="#451a03">Coffee</text>
+  </g>
+
+  <!-- Bottom Title -->
+  <rect x="40" y="340" width="520" height="42" rx="14" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="60" y="366" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#f43f5e">Task #3: Presenting 4 Signature Cheesecake Flavors to Investors</text>
+</svg>

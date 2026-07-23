@@ -366,16 +366,10 @@ export default function TripReportsPage() {
                 <div className="space-y-4 bg-gradient-to-br from-slate-900 via-pink-950 to-slate-900 text-white p-6 sm:p-8 rounded-3xl border border-pink-500/30 shadow-xl">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pink-500/30 pb-4">
                     <div>
-                      <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider block">
-                        📸 Visual Activity Database & Image Logs
-                      </span>
-                      <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white">
-                        Logged Fieldwork Activities ({report.activities.length} Visual Tasks)
+                      <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white flex items-center gap-2">
+                        <span>📸 Visual Activity</span>
                       </h3>
                     </div>
-                    <span className="text-xs font-extrabold text-pink-300 bg-pink-500/20 px-3.5 py-1.5 rounded-full border border-pink-400/40 w-fit">
-                      Exactly 1 High-Quality Image / Activity
-                    </span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 pt-2">
