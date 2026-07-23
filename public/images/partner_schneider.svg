@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <rect width="400" height="120" rx="16" fill="#ffffff"/>
+  <!-- Green Schneider Electric Banner -->
+  <g transform="translate(30, 25)">
+    <rect x="0" y="0" width="70" height="70" rx="14" fill="#3d9970"/>
+    <path d="M 20 20 L 50 20 L 50 32 L 34 32 L 34 40 L 48 40 L 48 52 L 20 52 Z" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="120" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="26" fill="#0f172a" letter-spacing="-0.5">Schneider</text>
+  <text x="120" y="76" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="20" fill="#3d9970" letter-spacing="1">Electric</text>
+  <text x="120" y="94" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="11" fill="#64748b">Cold-Chain IoT &amp; Sensors</text>
+</svg>

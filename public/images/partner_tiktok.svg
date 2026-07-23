@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <rect width="400" height="120" rx="16" fill="#0f172a"/>
+  <!-- TikTok Note Icon -->
+  <g transform="translate(35, 25)">
+    <circle cx="35" cy="35" r="30" fill="#1e293b"/>
+    <path d="M 42 20 C 45 25, 50 28, 55 28 L 55 35 C 50 35, 45 33, 42 30 L 42 45 C 42 53, 35 58, 27 55 C 21 53, 18 46, 21 40 C 24 35, 31 33, 36 36 L 36 20 Z" fill="#25f4ee"/>
+    <path d="M 40 22 C 43 27, 48 30, 53 30 L 53 35 C 48 35, 43 33, 40 30 L 40 45 C 40 53, 33 58, 25 55 C 22 53, 20 48, 22 43 C 23 41, 25 39, 27 38 L 27 44 C 25 44, 24 46, 25 48 C 26 50, 29 51, 31 50 C 33 49, 34 47, 34 45 L 34 22 Z" fill="#fe2c55"/>
+  </g>
+  <!-- Text -->
+  <text x="120" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="-0.5">TikTok</text>
+  <text x="120" y="76" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="20" fill="#fe2c55" letter-spacing="1">Shop SEA</text>
+  <text x="120" y="94" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="11" fill="#94a3b8">Social Commerce &amp; Creators</text>
+</svg>

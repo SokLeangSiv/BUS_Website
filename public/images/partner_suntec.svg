@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <rect width="400" height="120" rx="16" fill="#ffffff"/>
+  <!-- Suntec Pyramid Icon -->
+  <g transform="translate(30, 20)">
+    <polygon points="40,10 70,70 10,70" fill="#0284c7" />
+    <polygon points="40,10 70,70 40,70" fill="#0369a1" />
+    <polygon points="40,25 55,60 25,60" fill="#38bdf8" />
+  </g>
+  <!-- Text -->
+  <text x="120" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#0f172a" letter-spacing="-0.5">SUNTEC</text>
+  <text x="120" y="76" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="16" fill="#0284c7" letter-spacing="2">SINGAPORE</text>
+  <text x="120" y="94" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="11" fill="#64748b">Convention &amp; Exhibition Centre</text>
+</svg>

@@ -20,9 +20,9 @@ export default function AboutPage() {
       {/* HEADER HERO */}
       <section className="pt-12 pb-16 md:pt-20 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-700 text-xs font-bold shadow-xs">
-            <Heart className="w-4 h-4 text-pink-500 fill-pink-500" />
-            <span>Established 2024 • Our Company Profile & Story 👑</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-pink-100 via-rose-100 to-amber-100 border border-pink-300 text-pink-800 text-xs font-extrabold shadow-sm">
+            <Sparkles className="w-4 h-4 text-amber-500 fill-amber-400 animate-pulse" />
+            <span>Cambodia's Handcrafted Heritage, Baked with Modern Passion 👑</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
@@ -32,8 +32,8 @@ export default function AboutPage() {
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-medium">
-            Established in 2024 in Phnom Penh, <strong>Five Slices Cheesecake Co.</strong> blends artisanal baking with local ingredient pride, disciplined expansion planning, and warm customer care.
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-semibold">
+            Established in 2024 in Phnom Penh, <strong>Five Slices Cheesecake Co.</strong> blends artisanal baking with organic Kampong Speu palm sugar, cold-chain delivery precision, and disciplined expansion planning.
           </p>
         </div>
       </section>
@@ -221,56 +221,110 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PARTNERS & CSR */}
-      <section className="py-16 bg-white/80 border-t border-pink-100">
+      {/* COMPANY ACHIEVEMENTS & MILESTONES */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-rose-950 to-slate-900 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
+          <div className="text-center space-y-3">
+            <span className="px-4 py-1.5 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-extrabold text-xs tracking-wider uppercase">
+              🏆 Key Performance Track Record
+            </span>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white">
+              Company Achievements & Impact (2024–2026)
+            </h2>
+            <p className="text-sm text-pink-200/80 max-w-2xl mx-auto">
+              Measuring our operational growth across sales volume, regional investor interest, customer satisfaction, and local agricultural partnership.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 space-y-2">
+              <span className="font-heading font-extrabold text-4xl sm:text-5xl text-amber-300 block">
+                $75,000
+              </span>
+              <span className="text-xs font-bold text-pink-200 block uppercase tracking-wider">
+                Investor Interest Pipeline
+              </span>
+              <p className="text-[11px] text-slate-300">Non-binding growth financing lead for chillers & hotel contracts.</p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 space-y-2">
+              <span className="font-heading font-extrabold text-4xl sm:text-5xl text-pink-400 block">
+                100%
+              </span>
+              <span className="text-xs font-bold text-pink-200 block uppercase tracking-wider">
+                GI Organic Palm Sugar
+              </span>
+              <p className="text-[11px] text-slate-300">Direct fair-trade sourcing from Kampong Speu farming co-ops.</p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 space-y-2">
+              <span className="font-heading font-extrabold text-4xl sm:text-5xl text-emerald-400 block">
+                4.9★
+              </span>
+              <span className="text-xs font-bold text-pink-200 block uppercase tracking-wider">
+                Customer Satisfaction
+              </span>
+              <p className="text-[11px] text-slate-300">Over 1,200 slices delivered with cold-chain temperature precision.</p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 space-y-2">
+              <span className="font-heading font-extrabold text-4xl sm:text-5xl text-sky-400 block">
+                5 Trips
+              </span>
+              <span className="text-xs font-bold text-pink-200 block uppercase tracking-wider">
+                Fieldwork Expeditions
+              </span>
+              <p className="text-[11px] text-slate-300">Complete expansion assessment across Cambodia, Malaysia & Singapore.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEPARATED PARTNERS SECTION (INTERNATIONAL & CAMBODIAN) */}
+      <section className="py-20 bg-white/90 border-t border-pink-100 space-y-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
-          {/* Strategic Partners */}
-          <div>
-            <SectionHeading
-              badge="Business Ecosystem"
-              title="Partners & Alliances"
-              subtitle="Strategic collaborations across retail malls, logistics networks, digital payments, and organic farm sourcing."
-            />
+          {/* SECTION 1: INTERNATIONAL PARTNERS */}
+          <div className="space-y-8">
+            <div className="border-b border-sky-200 pb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 text-sky-900 font-extrabold text-xs shadow-xs mb-3 border border-sky-300">
+                <Globe className="w-4 h-4 text-sky-600" />
+                <span>Global Business Ecosystem</span>
+              </div>
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">
+                🌐 International Strategic Partners
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl font-medium">
+                Global collaborations supplying premier New Zealand dairy, cold-chain IoT sensors, regional marketing research in Singapore, and AI workplace tech in Malaysia.
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {PARTNERS.map((partner) => (
+              {PARTNERS.filter((p) => p.isInternational).map((partner) => (
                 <PartnerCard key={partner.id} partner={partner} />
               ))}
             </div>
           </div>
 
-          {/* International Linkages & CSR */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl glass-card border border-pink-200 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">
-                <Globe className="w-4 h-4 text-sky-600" /> International Research
+          {/* SECTION 2: CAMBODIAN NATIONAL PARTNERS */}
+          <div className="space-y-8 pt-8 border-t border-pink-200">
+            <div className="border-b border-pink-200 pb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100 text-pink-900 font-extrabold text-xs shadow-xs mb-3 border border-pink-300">
+                <span>🇰🇭</span>
+                <span>Domestic Cambodia Ecosystem</span>
               </div>
-              <h3 className="font-heading font-extrabold text-2xl text-slate-900">
-                International Exchanges
-              </h3>
-              <ul className="text-xs text-slate-600 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
-                  <strong>Malaysia AI Conference (KLCC):</strong> Testing weekly demand forecasting to reduce bakery waste.
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
-                  <strong>Singapore Marketing Summit (Suntec):</strong> Designing 90-day short video campaigns with local micro-influencers.
-                </li>
-              </ul>
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">
+                🇰🇭 Cambodian Corporate Alliances
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl font-medium">
+                National partners powering on-demand cold-chain delivery, digital KHQR payments, retail supermarket displays, and organic farm sourcing.
+              </p>
             </div>
 
-            <div className="p-8 rounded-3xl glass-card border border-pink-200 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
-                <Sprout className="w-4 h-4 text-emerald-600" /> Farmer Outreach & CSR
-              </div>
-              <h3 className="font-heading font-extrabold text-2xl text-slate-900">
-                Supporting Palm Sugar Farmers
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                We buy organic palm sugar directly from smallholder farmers in Kampong Speu province at fair market premiums.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {PARTNERS.filter((p) => !p.isInternational).map((partner) => (
+                <PartnerCard key={partner.id} partner={partner} />
+              ))}
             </div>
           </div>
 

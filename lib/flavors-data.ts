@@ -198,6 +198,7 @@ export interface Partner {
   description: string;
   logoPath: string;
   badgeText: string;
+  achievement: string;
 }
 
 export const PARTNERS: Partner[] = [
@@ -212,7 +213,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Fonterra Foodservice APAC",
     description: "Official international dairy supplier providing premium New Zealand cream cheese for Five Slices' signature texture.",
     logoPath: "/images/partner_anchor.png",
-    badgeText: "International Dairy Partner"
+    badgeText: "International Dairy Partner",
+    achievement: "100% Pure New Zealand Grass-Fed Cream Cheese Standard"
   },
   {
     id: "suntec-singapore",
@@ -223,8 +225,9 @@ export const PARTNERS: Partner[] = [
     category: "Digital Marketing & Research",
     leadName: "Asia-Pacific Retail Summit",
     description: "International partner host for social media research, short-form video strategy, and Gen-Z customer engagement.",
-    logoPath: "/images/trip_singapore.png",
-    badgeText: "Singapore Tech Partner"
+    logoPath: "/images/partner_suntec.svg",
+    badgeText: "Singapore Tech Partner",
+    achievement: "3.5x Customer Conversion via Short-Form Video Hooks"
   },
   {
     id: "klcc-malaysia",
@@ -235,8 +238,9 @@ export const PARTNERS: Partner[] = [
     category: "AI Technology & Demand Systems",
     leadName: "Asia AI Workplace Summit",
     description: "International tech exchange partner for weekly AI demand forecasting and smart inventory stock alert systems.",
-    logoPath: "/images/trip_malaysia.png",
-    badgeText: "Malaysia AI Partner"
+    logoPath: "/images/partner_klcc.svg",
+    badgeText: "Malaysia AI Partner",
+    achievement: "Weekly AI Sales Forecasting & Zero Waste Target"
   },
   {
     id: "schneider-electric",
@@ -247,11 +251,25 @@ export const PARTNERS: Partner[] = [
     category: "Cold-Chain & IoT Technology",
     leadName: "Smart Logistics Division",
     description: "Global temperature control sensor & smart chiller monitoring partner ensuring 100% food safety compliance.",
-    logoPath: "/images/value_cold_chain.png",
-    badgeText: "Global Cold-Chain Partner"
+    logoPath: "/images/partner_schneider.svg",
+    badgeText: "Global Cold-Chain Partner",
+    achievement: "24/7 Real-Time Smart Chiller Temperature Monitoring"
+  },
+  {
+    id: "tiktok-shop",
+    name: "TikTok Shop Southeast Asia",
+    isInternational: true,
+    country: "Regional",
+    flag: "🌐",
+    category: "Social Commerce & Creators",
+    leadName: "Creator Ecosystem Division",
+    description: "Regional micro-influencer & live-stream shopping integration partner for online dessert box drops.",
+    logoPath: "/images/partner_tiktok.svg",
+    badgeText: "Social Commerce Partner",
+    achievement: "90-Day Viral Content Strategy & Micro-Influencer Network"
   },
   
-  // DOMESTIC / NATIONAL PARTNERS
+  // DOMESTIC / NATIONAL CAMBODIAN PARTNERS
   {
     id: "grab-food",
     name: "GrabFood Cambodia",
@@ -262,7 +280,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Delivery Partner Network",
     description: "Official cold-chain dispatch & rapid delivery partner connecting our cloud kitchens directly to customer doorsteps.",
     logoPath: "/images/partner_grabcambodia.png",
-    badgeText: "Delivery Partner"
+    badgeText: "Delivery Partner",
+    achievement: "1,200+ Slices Delivered with 4.9★ Customer Rating"
   },
   {
     id: "foodpanda",
@@ -274,7 +293,8 @@ export const PARTNERS: Partner[] = [
     leadName: "On-Demand Delivery Network",
     description: "Featured bakery merchant partner powering instant slice pre-orders & scheduled catering across city zones.",
     logoPath: "/images/partner_foodpanda.png",
-    badgeText: "E-Commerce Partner"
+    badgeText: "E-Commerce Partner",
+    achievement: "Featured Top Bakery Merchant 2026 • 15-Min Dispatch"
   },
   {
     id: "aba-bank",
@@ -286,7 +306,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Fintech & PayWay Integration",
     description: "Seamless KHQR mobile payment gateway provider for instant, zero-friction online cheesecake pre-orders.",
     logoPath: "/images/partner_ababank.png",
-    badgeText: "Payment Gateway"
+    badgeText: "Payment Gateway",
+    achievement: "100% Instant Cashless KHQR Online Checkout"
   },
   {
     id: "chip-mong",
@@ -298,7 +319,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Retail Mall Expansion",
     description: "Premium supermarket retail placement partner for packaged dessert displays and mall kiosk pop-ups.",
     logoPath: "/images/partner_chipmong.png",
-    badgeText: "Retail Mall Partner"
+    badgeText: "Retail Mall Partner",
+    achievement: "3 Mall Supermarket Display Kiosks Secured"
   },
   {
     id: "kspsa",
@@ -310,7 +332,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Organic Farmers Co-op",
     description: "Direct farm-to-bakery supplier providing 100% certified organic Kampong Speu GI palm sugar caramel glaze.",
     logoPath: "/images/partner_kspsa.png",
-    badgeText: "GI Organic Sourcing"
+    badgeText: "GI Organic Sourcing",
+    achievement: "100% Certified Organic Farm Sourcing & Fair-Trade Premium"
   },
   {
     id: "coastal-ventures",
@@ -322,7 +345,8 @@ export const PARTNERS: Partner[] = [
     leadName: "Ms. Dara Chenda",
     description: "Strategic hospitality investor partner ($75,000 potential pipeline) for commercial chillers & hotel dessert supply contracts.",
     logoPath: "/images/partner_coastal_ventures.png",
-    badgeText: "Hotel & Investor Lead"
+    badgeText: "Hotel & Investor Lead",
+    achievement: "$75,000 Non-Binding Investment Interest & Hotel Network"
   },
   {
     id: "seaside-retail",
@@ -334,6 +358,7 @@ export const PARTNERS: Partner[] = [
     leadName: "Mr. Lim Vannak",
     description: "Kiosk retail partner hosting a 3-month seaside pop-up kiosk test along Ochheuteal Beach Road, Sihanoukville.",
     logoPath: "/images/partner_seaside_retail.png",
-    badgeText: "Seaside Kiosk Partner"
+    badgeText: "Seaside Kiosk Partner",
+    achievement: "3-Month Kiosk Pilot at Ochheuteal Beach Promenade"
   }
 ];
