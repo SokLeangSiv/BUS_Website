@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Sparkles, Heart, Menu, X, ShoppingBag, Cake, ChevronDown, FileText, Globe, Users, MapPin, Handshake, Award } from "lucide-react";
+import { Sparkles, Heart, Menu, X, ShoppingBag, Cake, ChevronDown, FileText, Globe, Users, MapPin, Handshake, Award, Sprout } from "lucide-react";
 
 interface NavbarProps {
   sweetRainEnabled?: boolean;
@@ -185,6 +185,20 @@ export const Navbar: React.FC<NavbarProps> = ({
                   </div>
                 </a>
 
+                <a
+                  href="/about#csr"
+                  onClick={(e) => handleSectionClick(e, "/about", "csr")}
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-emerald-50 text-xs font-bold text-slate-800 transition-colors"
+                >
+                  <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700 shrink-0">
+                    <Sprout className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="block font-heading text-sm text-emerald-950">🌱 CSR & Community Outreach</span>
+                    <span className="text-[10px] text-slate-500 font-normal">Palm Sugar Farmers, Youth Apprenticeships</span>
+                  </div>
+                </a>
+
               </div>
             )}
           </div>
@@ -305,6 +319,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="px-4 py-3 rounded-2xl text-sm font-bold text-slate-700 hover:bg-rose-50 flex items-center gap-2"
             >
               <span>👑 Executive Leadership Team</span>
+            </a>
+
+            <a
+              href="/about#csr"
+              onClick={(e) => handleSectionClick(e, "/about", "csr")}
+              className="px-4 py-3 rounded-2xl text-sm font-bold text-slate-700 hover:bg-emerald-50 flex items-center gap-2"
+            >
+              <span>🌱 CSR & Community Outreach</span>
             </a>
 
             <div className="mt-4 pt-3 border-t border-pink-100">

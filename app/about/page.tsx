@@ -350,6 +350,87 @@ export default function AboutPage() {
 
         </div>
       </section>
+
+      {/* OUTREACH PROGRAMS & CORPORATE SOCIAL RESPONSIBILITY (CSR) */}
+      <section id="csr" className="scroll-mt-28 py-20 bg-gradient-to-b from-emerald-50/70 via-white to-pink-50/40 border-t border-emerald-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <SectionHeading
+            badge="Community Impact & CSR"
+            title="Outreach Programs & Corporate Social Responsibility"
+            subtitle="At Five Slices Cheesecake Co., we believe business growth goes hand-in-hand with empowering local Cambodian farmers, supporting youth education, and promoting sustainable baking practices."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* CSR Card 1: Organic Farmers Co-op */}
+            <div className="p-8 rounded-3xl glass-card border border-emerald-200 bg-white/95 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-extrabold text-2xl">
+                🌴
+              </div>
+              <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-extrabold border border-emerald-200 inline-block">
+                Fair-Trade Farmers
+              </span>
+              <h3 className="font-heading font-extrabold text-xl text-slate-900">
+                Kampong Speu Palm Sugar Co-op
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                We purchase 100% GI-certified organic palm sugar directly from smallholder farming families in Kampong Speu province at a 15% fair-trade price premium, ensuring sustainable rural livelihoods.
+              </p>
+            </div>
+
+            {/* CSR Card 2: Youth Baking Apprenticeship */}
+            <div className="p-8 rounded-3xl glass-card border border-pink-200 bg-white/95 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-700 flex items-center justify-center font-extrabold text-2xl">
+                🎓
+              </div>
+              <span className="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-[11px] font-extrabold border border-pink-200 inline-block">
+                Youth Apprenticeships
+              </span>
+              <h3 className="font-heading font-extrabold text-xl text-slate-900">
+                Youth Culinary Skills & Business Workshops
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                Providing paid culinary apprenticeships and micro-bakery management training for Cambodian vocational students in Phnom Penh and Siem Reap to build long-term career pathways.
+              </p>
+            </div>
+
+            {/* CSR Card 3: Eco-Friendly Packaging */}
+            <div className="p-8 rounded-3xl glass-card border border-sky-200 bg-white/95 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center font-extrabold text-2xl">
+                ♻️
+              </div>
+              <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-[11px] font-extrabold border border-sky-200 inline-block">
+                Green Logistics
+              </span>
+              <h3 className="font-heading font-extrabold text-xl text-slate-900">
+                100% Biodegradable & Zero-Plastic Packaging
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                All Five Slices dessert boxes are crafted from 100% biodegradable sugarcane fiber and unbleached paperboard, paired with reusable insulated thermal dispatch bags.
+              </p>
+            </div>
+
+            {/* CSR Card 4: Coastal Cleanups & Health */}
+            <div className="p-8 rounded-3xl glass-card border border-amber-200 bg-white/95 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-extrabold text-2xl">
+                🏖️
+              </div>
+              <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[11px] font-extrabold border border-amber-200 inline-block">
+                Community Health
+              </span>
+              <h3 className="font-heading font-extrabold text-xl text-slate-900">
+                Coastal Cleanups & Beach Conservation
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                Sponsoring weekend beach cleanup drives along Ochheuteal Beach in Sihanoukville and donating fresh baked slice boxes to local community healthcare workers and volunteers.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
